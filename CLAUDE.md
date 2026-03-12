@@ -1,32 +1,33 @@
-# CLAUDE.md - Pratt Painting Western Sydney
+# CLAUDE.md - Ace Home Services
 
 ## Business Context
 
-**Business Name:** Pratt Painting Western Sydney
-**Owner:** Dale Pratt
-**Phone:** 0412 675 650
-**Email:** dalepratt79@yahoo.com.au
-**ABN:** 25760097457
-**Painter's Licence:** 329184c
-**Experience:** 20+ years in painting and decorating
-**Structure:** Sole trader
-**Location:** Sydney, NSW (postcode 2766) - Western Sydney region
+**Business Name:** Ace Home Services
+**Phone:** 0414 885 813
+**Email:** acehomeservices21@gmail.com
+**Location:** Golden Plains, Geelong, and Bellarine regions of Victoria (service areas spanning Teesdale, Lara, and surrounding locations)
+
+### About
+- Professional residential and commercial cleaning services
+- NDIS and DVA approved
+- Eco-friendly cleaning approach
+- Known for before-and-after content showcasing quality work across a range of cleaning tasks including bathrooms and more
 
 ### Services
-- Interior Painting
-- Exterior Painting
-- New Work
-- Repaints
-- Residential & Commercial
-- Free Quotes Available
+- Residential Cleaning
+- Commercial Cleaning
+- NDIS Cleaning Services
+- DVA Cleaning Services
+- Eco-Friendly Cleaning
 
 ### Client Types
-- Domestic
+- Residential
 - Commercial
+- NDIS participants
+- DVA clients
 
 ### Social Media
-- Facebook
-- Instagram
+- Facebook (488 followers, active community engagement)
 
 ---
 
