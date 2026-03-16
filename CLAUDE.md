@@ -1,25 +1,25 @@
-# CLAUDE.md - Slate & Stem Landscapes
+# CLAUDE.md - Lake Mac Home & Roof Co.
 
 ## Business Context
 
-**Business Name:** Slate & Stem Landscapes
-**Phone:** 0403 025 777
-**Email:** sslandscaping@gmail.com
-**Location:** Bowral, NSW - servicing the Southern Highlands, Illawarra, and MacArthur regions
+**Business Name:** Lake Mac Home & Roof Co.
+**Phone:** 0468 390 771
+**Email:** lakemachomeroofco@gmail.com
+**Location:** Lake Macquarie, NSW 2284
 **Hours:** Always open - flexible availability
 
 ### About
-- Landscaping company specialising in both one-off transformation projects and long-term garden upkeep
-- Work spans practical and aesthetic landscaping
-- From slashing overgrown acre blocks and removing problem trees through to polished paving and tiling jobs
+- Small, family-owned home maintenance and handyman business based in the Lake Macquarie area of NSW
+- Positioned as the go-to option for smaller jobs that larger companies won't bother with
+- Fills the gap for everyday homeowners who need reliable, accessible trade help
+- Fully licensed and insured
+- Offers free quotes
 
 ### Services
-- Small Earthworks
-- Paving and Tiling
-- Full Yard Makeovers
-- Ongoing Maintenance
-- Land Clearing / Slashing
-- Tree Removal
+- General Home Maintenance
+- Carpentry
+- Roofing
+- Home Layout Changes
 
 ---
 
@@ -71,7 +71,7 @@
 
 ## Deployment
 - **Always deploy changes to GitHub and Vercel** after making code changes.
-- Git remote: `origin` at `https://github.com/suterasites/SlateNStemLandscaping.git`
+- Git remote: `origin` (check with `git remote -v` for current URL)
 - Push to `main` branch, then deploy to Vercel with `vercel --prod --yes`.
 
 ## Hard Rules
