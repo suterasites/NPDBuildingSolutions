@@ -1,33 +1,34 @@
-# CLAUDE.md - Fresko Cleaning
+# CLAUDE.md - DIG and MOVE Earthmoving
 
 ## Business Context
 
-**Business Name:** Fresko Cleaning
-**Owner:** Luke Fellows
-**Phone:** 0407 669 694
-**Email:** fresko.group.au@gmail.com
-**Location:** Turvey Park, Wagga Wagga, NSW 2650
-**Clients:** Residential and commercial
+**Business Name:** DIG and MOVE Earthmoving
+**Phone:** 0427 297 942
+**Email:** hastingshaulage1@outlook.com
+**Location:** Melbourne, VIC and Gippsland region
+**Clients:** Residential, rural, and commercial
 
 ### About
-- Exterior cleaning business based in Wagga Wagga, NSW, run by Luke Fellows
-- Services both residential and commercial clients
-- Covers windows, post-build cleans, and general exterior cleaning
-- The post-build niche ties them into the construction pipeline, leading to ongoing relationships with builders and developers in the region
-- Operating in a regional market - less competition, tighter community, word of mouth travels fast
-- Clean, memorable business name with consistent branding across platforms
-- Contactable via phone, email, Facebook Messenger, or Instagram DMs
+- Family-run earthworks business operating across Melbourne, VIC and out to the Gippsland region
+- Positions themselves on professional service and customer satisfaction
+- Covers all types of earthworks - not locked into one narrow lane
+- Can service residential builds, rural properties, and commercial sites, giving flexibility depending on where the work is
+- Fully insured with all correct tickets/compliance - important in earthworks where compliance matters
+- Contactable via phone, email, or Facebook Messenger
 - Listed as "Always open" on Facebook, signalling availability and flexibility
 
 ### Services
-- Window Cleaning
-- Post-Construction Cleanup
-- Exterior Cleaning (residential)
-- Exterior Cleaning (commercial)
+- Dam Cleans
+- Farm Tracks
+- Site Cuts and Cleans
+- Concrete Prep
+- Soil Spreading
+- Dirt/Rock/Concrete Load Outs
+- Footings
+- Pier Holes
 
 ### Social Media
-- **Instagram:** @fresko.cleaning - ~201 followers, 15 posts
-- **Facebook:** Fresko Cleaning - ~180 followers, no reviews yet. Currently categorised as "Digital creator" rather than a cleaning service (worth correcting for discoverability)
+- **Facebook:** DIG and MOVE Earthmoving - ~21 followers, no reviews yet. Currently categorised as "Home improvement" - could be updated to "Excavation contractor" or "Earthmoving service" for better discoverability. Most recent post (15 March 2026) shows a Case excavator on a residential job site - real job photos build trust
 
 ---
 
