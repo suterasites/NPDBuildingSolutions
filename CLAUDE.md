@@ -1,25 +1,35 @@
-# CLAUDE.md - Lake Mac Home & Roof Co.
+# CLAUDE.md - CM Tile Roofing
 
 ## Business Context
 
-**Business Name:** Lake Mac Home & Roof Co.
-**Phone:** 0468 390 771
-**Email:** lakemachomeroofco@gmail.com
-**Location:** Lake Macquarie, NSW 2284
-**Hours:** Always open - flexible availability
+**Business Name:** CM Tile Roofing
+**Phone:** 0433 545 196
+**Email:** cmtileroofing@gmail.com
+**Location:** Greater Melbourne, VIC
+**Experience:** 6+ years in the industry
 
 ### About
-- Small, family-owned home maintenance and handyman business based in the Lake Macquarie area of NSW
-- Positioned as the go-to option for smaller jobs that larger companies won't bother with
-- Fills the gap for everyday homeowners who need reliable, accessible trade help
-- Fully licensed and insured
+- Melbourne-based roofing service specialising in tile roof repairs and restorations
+- Focused, niche operator - they stick to tile roofing and the services that naturally sit around it
+- That kind of specialisation builds trust quickly, especially in trades
+- Offers free roof inspections - no commitment, just honest advice on what the roof actually needs
 - Offers free quotes
+- Contactable via phone, email, Instagram DMs, or Facebook Messenger
 
 ### Services
-- General Home Maintenance
-- Carpentry
-- Roofing
-- Home Layout Changes
+- Tile Repairs
+- Rebedding and Repointing
+- Full Roof Restorations (cleaning, repairs, rebedding, and coating)
+- Gutter Cleaning
+- Bird Proofing (installing mesh to stop pigeons nesting under solar panels)
+- Solar Panel Cleaning
+- Roof Pressure Washing
+- Roof Leak Detection
+- Free Roof Inspections
+
+### Social Media
+- **Instagram:** @cmtile_roofing - ~686 followers, 12 posts, includes before/after content
+- **Facebook:** Newer page, still building traction (~6 followers, no reviews yet) - room to grow
 
 ---
 
