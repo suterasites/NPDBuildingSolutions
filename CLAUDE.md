@@ -1,34 +1,37 @@
-# CLAUDE.md - DIG and MOVE Earthmoving
+# CLAUDE.md - NPD Building Solutions
 
 ## Business Context
 
-**Business Name:** DIG and MOVE Earthmoving
-**Phone:** 0427 297 942
-**Email:** hastingshaulage1@outlook.com
-**Location:** Melbourne, VIC and Gippsland region
-**Clients:** Residential, rural, and commercial
+**Business Name:** NPD Building Solutions
+**Phone:** 0427 278 285
+**Email:** npdbuildingsolutions@outlook.com
+**Location:** Based in Bairnsdale, VIC - servicing Bairnsdale and surrounding areas
+**Experience:** 10+ years
 
 ### About
-- Family-run earthworks business operating across Melbourne, VIC and out to the Gippsland region
-- Positions themselves on professional service and customer satisfaction
-- Covers all types of earthworks - not locked into one narrow lane
-- Can service residential builds, rural properties, and commercial sites, giving flexibility depending on where the work is
-- Fully insured with all correct tickets/compliance - important in earthworks where compliance matters
+- Carpentry and renovations business based in Bairnsdale, VIC, with over 10 years of experience
+- Bairnsdale is the primary service area and home base - use this for local SEO targeting (e.g. "carpenter Bairnsdale", "renovations Bairnsdale VIC")
+- Positions themselves as an all-round building solution with a focus on high-quality renovations and attention to detail
+- Wide service range covering carpentry, tiling, decks, pergolas, custom work, fencing, gates, and bathroom renovations
+- Bathroom renovation work is a standout - completed 16 quality bathrooms in 14 months working alongside Cutting Edge Constructions, showing solid volume and an established builder relationship
+- Strong word-of-mouth reputation built over 10+ years in the area, now building out digital presence
+- Tone is friendly and approachable ("service with a smile") - fits well for a regional trades business where personal connection matters
+- Branding is clean and professional with a black and orange logo
 - Contactable via phone, email, or Facebook Messenger
-- Listed as "Always open" on Facebook, signalling availability and flexibility
 
 ### Services
-- Dam Cleans
-- Farm Tracks
-- Site Cuts and Cleans
-- Concrete Prep
-- Soil Spreading
-- Dirt/Rock/Concrete Load Outs
-- Footings
-- Pier Holes
+- General Carpentry
+- High-Quality Tiling
+- Decks
+- Pergolas
+- Custom Work
+- Pool Fencing
+- Fencing
+- Gates
+- Bathroom Renovations
 
 ### Social Media
-- **Facebook:** DIG and MOVE Earthmoving - ~21 followers, no reviews yet. Currently categorised as "Home improvement" - could be updated to "Excavation contractor" or "Earthmoving service" for better discoverability. Most recent post (15 March 2026) shows a Case excavator on a residential job site - real job photos build trust
+- **Facebook:** NPD Building Solutions - ~38 followers, no reviews yet. Currently categorised as "Carpenter" - could be broadened to "General contractor" or "Building services" for better discoverability. Most recent post (13 March 2026) showcases bathroom renovation work with photos - real finished work builds trust
 
 ---
 
@@ -82,6 +85,11 @@
 - **Always deploy changes to GitHub and Vercel** after making code changes.
 - Git remote: `origin` (check with `git remote -v` for current URL)
 - Push to `main` branch, then deploy to Vercel with `vercel --prod --yes`.
+
+## Multi-Page Consistency
+- **Navbar:** The navbar must be identical across all pages. If the navbar is modified on any page, apply the same change to every other page immediately.
+- **Footer:** The footer must be identical across all pages. If the footer is modified on any page, apply the same change to every other page immediately.
+- **Internal links:** All text links that reference a page on the site must link to the correct page URL. When a new page is created, scan all existing pages and update any mentions of that topic to link to the new page.
 
 ## Hard Rules
 - Do not add sections, features, or content not in the reference
