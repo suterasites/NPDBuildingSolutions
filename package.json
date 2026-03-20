@@ -1,0 +1,23 @@
+{
+  "name": "npd-building-solutions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suterasites/NPDBuildingSolutions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suterasites/NPDBuildingSolutions/issues"
+  },
+  "homepage": "https://github.com/suterasites/NPDBuildingSolutions#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
