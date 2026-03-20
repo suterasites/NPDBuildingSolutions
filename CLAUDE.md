@@ -31,7 +31,10 @@
 - Bathroom Renovations
 
 ### Social Media
-- **Facebook:** NPD Building Solutions - ~38 followers, no reviews yet. Currently categorised as "Carpenter" - could be broadened to "General contractor" or "Building services" for better discoverability. Most recent post (13 March 2026) showcases bathroom renovation work with photos - real finished work builds trust
+- **Facebook:** NPD Building Solutions (https://www.facebook.com/profile.php?id=61588392252999) - ~38 followers, no reviews yet. Currently categorised as "Carpenter" - could be broadened to "General contractor" or "Building services" for better discoverability. Most recent post (13 March 2026) showcases bathroom renovation work with photos - real finished work builds trust
+
+### Forms
+- **Formspree:** https://formspree.io/f/maqpkepq - used for contact forms on index.html and contact.html
 
 ---
 
