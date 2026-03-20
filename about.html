@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | NPD Building Solutions - Carpentry & Renovations Bairnsdale</title>
+  <meta name="description" content="Learn about NPD Building Solutions - over 10 years of carpentry and renovation experience in Bairnsdale, VIC. Quality workmanship, attention to detail, and service with a smile.">
+  <meta name="keywords" content="about NPD Building Solutions, carpenter Bairnsdale, renovations Bairnsdale VIC, building services East Gippsland, experienced carpenter">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Us | NPD Building Solutions">
+  <meta property="og:description" content="Over 10 years of carpentry and renovation experience in Bairnsdale, VIC. Quality workmanship, attention to detail, and service with a smile.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_AU">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "NPD Building Solutions",
+    "description": "Carpentry and renovations business based in Bairnsdale, VIC, with over 10 years of experience.",
+    "telephone": "+61427278285",
+    "email": "npdbuildingsolutions@outlook.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bairnsdale",
+      "addressRegion": "VIC",
+      "addressCountry": "AU"
+    },
+    "areaServed": [
+      { "@type": "Place", "name": "Bairnsdale" },
+      { "@type": "Place", "name": "East Gippsland" }
+    ],
+    "serviceType": ["General Carpentry", "High-Quality Tiling", "Decks", "Pergolas", "Custom Work", "Pool Fencing", "Fencing", "Gates", "Bathroom Renovations"],
+    "priceRange": "$$"
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#E8710A',
+              dark: '#CC6010',
+              light: '#F09A4E',
+              50: '#FEF5EC',
+              100: '#FDEBD4',
+            },
+          },
+          fontFamily: {
+            display: ['"Barlow Condensed"', 'Arial Narrow', 'sans-serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    h1, h2, h3, .font-display { font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; text-transform: uppercase; }
+
+    /* Grain texture overlay */
+    .grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Layered shadow system */
+    .shadow-elevated {
+      box-shadow:
+        0 1px 2px rgba(232, 113, 10, 0.04),
+        0 4px 8px rgba(232, 113, 10, 0.06),
+        0 12px 24px rgba(0, 0, 0, 0.06);
+    }
+    .shadow-floating {
+      box-shadow:
+        0 2px 4px rgba(232, 113, 10, 0.06),
+        0 8px 16px rgba(232, 113, 10, 0.08),
+        0 24px 48px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Spring-style easing */
+    .transition-spring {
+      transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* Focus visible */
+    .btn-primary:focus-visible,
+    .btn-secondary:focus-visible {
+      outline: 3px solid #E8710A;
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Navigation -->
+  <nav id="main-nav" class="fixed top-0 w-full z-50 bg-white backdrop-blur-sm border-b border-gray-200 transition-transform duration-300" role="navigation" aria-label="Main navigation">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <a href="index.html" class="flex items-center gap-2" aria-label="NPD Building Solutions home">
+          <span class="font-display text-xl sm:text-2xl tracking-tight text-gray-900" style="letter-spacing: -0.02em;"><span class="text-brand">NPD</span> Building Solutions</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="services.html" class="text-sm font-medium text-gray-600 hover:text-brand transition-colors duration-200">Services</a>
+          <a href="about.html" class="text-sm font-medium text-brand transition-colors duration-200">About</a>
+          <a href="index.html#gallery" class="text-sm font-medium text-gray-600 hover:text-brand transition-colors duration-200">Our Work</a>
+          <a href="index.html#contact" class="text-sm font-medium text-gray-600 hover:text-brand transition-colors duration-200">Contact</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="tel:0427278285" class="btn-primary inline-flex items-center gap-2 bg-brand hover:bg-brand-dark active:bg-brand-dark text-white font-semibold text-sm px-5 py-2.5 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <span class="hidden sm:inline">0427 278 285</span>
+            <span class="sm:hidden">Call Now</span>
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 text-gray-600 hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand active:scale-95 transition-transform duration-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="md:hidden overflow-hidden transition-[max-height] duration-300 ease-out max-h-0 bg-white border-t border-gray-200">
+      <div class="px-4 py-4 flex flex-col gap-1">
+        <a href="services.html" class="mobile-nav-link block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-brand hover:bg-gray-50 active:bg-gray-100 rounded-lg transition-colors duration-200">Services</a>
+        <a href="about.html" class="mobile-nav-link block px-4 py-3 text-sm font-semibold text-brand bg-brand-50 rounded-lg transition-colors duration-200">About</a>
+        <a href="index.html#gallery" class="mobile-nav-link block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-brand hover:bg-gray-50 active:bg-gray-100 rounded-lg transition-colors duration-200">Our Work</a>
+        <a href="index.html#contact" class="mobile-nav-link block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-brand hover:bg-gray-50 active:bg-gray-100 rounded-lg transition-colors duration-200">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    (function() {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const hamburger = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+      const links = menu.querySelectorAll('.mobile-nav-link');
+
+      function toggleMenu() {
+        const isOpen = menu.style.maxHeight && menu.style.maxHeight !== '0px';
+        if (isOpen) {
+          menu.style.maxHeight = '0px';
+          hamburger.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        } else {
+          menu.style.maxHeight = menu.scrollHeight + 'px';
+          hamburger.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      }
+
+      btn.addEventListener('click', toggleMenu);
+
+      links.forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.style.maxHeight = '0px';
+          hamburger.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+
+  <script>
+    (function() {
+      var nav = document.getElementById('main-nav');
+      var lastScroll = 0;
+      window.addEventListener('scroll', function() {
+        var current = window.scrollY;
+        if (current > lastScroll && current > 80) {
+          nav.style.transform = 'translateY(-100%)';
+        } else {
+          nav.style.transform = 'translateY(0)';
+        }
+        lastScroll = current;
+      });
+    })();
+  </script>
+
+  <!-- Page Hero -->
+  <section class="relative pt-32 sm:pt-40 pb-16 sm:pb-20 bg-gray-900 overflow-hidden grain">
+    <div class="absolute inset-0">
+      <img src="Assets/Image 2.jpg" alt="NPD Building Solutions - about us" class="w-full h-full object-cover opacity-30" loading="eager">
+      <div class="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/60 to-gray-900/90"></div>
+      <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
+    </div>
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-brand font-semibold text-xs tracking-[0.2em] uppercase mb-3">About Us</p>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display text-white leading-[0.95] mb-4" style="letter-spacing: -0.03em;">
+        Built on Experience, Driven by Quality
+      </h1>
+      <p class="text-gray-300 text-base max-w-xl" style="line-height: 1.7;">
+        Over 10 years of carpentry and renovation experience, right here in Bairnsdale, VIC.
+      </p>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="py-20 sm:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Image -->
+        <div class="relative">
+          <div class="overflow-hidden shadow-floating">
+            <div class="relative">
+              <img src="Assets/Image 3.jpg" alt="NPD Building Solutions at work" class="w-full h-[400px] sm:h-[500px] object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              <div class="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div>
+          <p class="text-brand font-semibold text-sm tracking-wide uppercase mb-3">Our Story</p>
+          <h2 class="text-3xl sm:text-4xl font-display text-gray-900 mb-6" style="letter-spacing: -0.03em;">Your All-Round Building Solution</h2>
+          <div class="space-y-4 text-gray-600" style="line-height: 1.7;">
+            <p>
+              NPD Building Solutions is a carpentry and renovations business based in Bairnsdale, VIC, with over 10 years of hands-on experience. We started with a simple idea: deliver quality workmanship, pay attention to the details, and treat every job like it's our own home.
+            </p>
+            <p>
+              Over the years, that approach has earned us a strong word-of-mouth reputation across Bairnsdale and the wider East Gippsland region. We've grown from general carpentry into a full-service building solution, covering everything from decks and pergolas to tiling, fencing, gates, and complete bathroom renovations.
+            </p>
+            <p>
+              One of our proudest achievements has been completing 16 quality bathrooms in just 14 months alongside Cutting Edge Constructions. That kind of volume, combined with consistent quality, speaks to the reliability and standards we bring to every project.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-20 sm:py-28 bg-gray-50 relative grain overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <p class="text-brand font-semibold text-sm tracking-wide uppercase mb-3">Why Choose Us</p>
+        <h2 class="text-3xl sm:text-4xl font-display text-gray-900 mb-4" style="letter-spacing: -0.03em;">What Sets Us Apart</h2>
+        <p class="text-gray-500 text-base" style="line-height: 1.7;">We believe great building work comes down to experience, communication, and genuine care for the finished product.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Value 1 -->
+        <div class="bg-white p-8 border border-gray-100 transition-spring transition-transform duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-brand/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-xl font-display text-gray-900 mb-3">10+ Years Experience</h3>
+          <p class="text-sm text-gray-500" style="line-height: 1.7;">Over a decade of hands-on carpentry and renovation work across Bairnsdale and surrounding areas. We've seen it all and we know what works.</p>
+        </div>
+
+        <!-- Value 2 -->
+        <div class="bg-white p-8 border border-gray-100 transition-spring transition-transform duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-brand/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+          </div>
+          <h3 class="text-xl font-display text-gray-900 mb-3">Attention to Detail</h3>
+          <p class="text-sm text-gray-500" style="line-height: 1.7;">Every cut, every tile, every joint is done with care. It's the small things that make the difference between good and great, and we take pride in getting it right.</p>
+        </div>
+
+        <!-- Value 3 -->
+        <div class="bg-white p-8 border border-gray-100 transition-spring transition-transform duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-brand/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-display text-gray-900 mb-3">Service with a Smile</h3>
+          <p class="text-sm text-gray-500" style="line-height: 1.7;">We're friendly, approachable, and easy to work with. Good communication and a positive attitude go a long way, and that's how we approach every job.</p>
+        </div>
+
+        <!-- Value 4 -->
+        <div class="bg-white p-8 border border-gray-100 transition-spring transition-transform duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-brand/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 class="text-xl font-display text-gray-900 mb-3">All-Round Capability</h3>
+          <p class="text-sm text-gray-500" style="line-height: 1.7;">From carpentry and tiling to decks, pergolas, fencing, and full bathroom renovations. One team for the whole job, keeping things simple and consistent.</p>
+        </div>
+
+        <!-- Value 5 -->
+        <div class="bg-white p-8 border border-gray-100 transition-spring transition-transform duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-brand/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-display text-gray-900 mb-3">Locally Based</h3>
+          <p class="text-sm text-gray-500" style="line-height: 1.7;">Based right here in Bairnsdale, we service the local community and surrounding areas. A trusted local name you can count on for your next project.</p>
+        </div>
+
+        <!-- Value 6 -->
+        <div class="bg-white p-8 border border-gray-100 transition-spring transition-transform duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-brand/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-display text-gray-900 mb-3">Proven Track Record</h3>
+          <p class="text-sm text-gray-500" style="line-height: 1.7;">16 quality bathrooms in 14 months alongside Cutting Edge Constructions. Strong builder relationships and a reputation built on delivering results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="py-16 sm:py-20 bg-gray-900 relative overflow-hidden">
+    <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div class="text-center">
+          <p class="text-4xl sm:text-5xl font-display text-brand mb-2" style="letter-spacing: -0.03em;">10+</p>
+          <p class="text-sm text-gray-400 uppercase tracking-wide">Years Experience</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl sm:text-5xl font-display text-brand mb-2" style="letter-spacing: -0.03em;">16</p>
+          <p class="text-sm text-gray-400 uppercase tracking-wide">Bathrooms in 14 Months</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl sm:text-5xl font-display text-brand mb-2" style="letter-spacing: -0.03em;">9</p>
+          <p class="text-sm text-gray-400 uppercase tracking-wide">Service Areas</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl sm:text-5xl font-display text-brand mb-2" style="letter-spacing: -0.03em;">100%</p>
+          <p class="text-sm text-gray-400 uppercase tracking-wide">Locally Owned</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image + Quote Section -->
+  <section class="py-20 sm:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Content -->
+        <div class="order-2 lg:order-1">
+          <p class="text-brand font-semibold text-sm tracking-wide uppercase mb-3">Our Approach</p>
+          <h2 class="text-3xl sm:text-4xl font-display text-gray-900 mb-6" style="letter-spacing: -0.03em;">Quality Work, Honest Service</h2>
+          <div class="space-y-4 text-gray-600" style="line-height: 1.7;">
+            <p>
+              We treat every project with the same level of care and professionalism, whether it's a small repair or a full renovation. Our goal is simple: do the job properly, communicate clearly, and leave you happy with the result.
+            </p>
+            <p>
+              We're not the biggest outfit in town, and that's by design. Staying hands-on means we can guarantee the quality of every job we take on. When you hire NPD, you get experienced tradespeople who care about the outcome, not a crew that rushes through to get to the next job.
+            </p>
+          </div>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="tel:0427278285" class="btn-primary inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-dark active:bg-brand-dark text-white font-bold text-sm tracking-[0.1em] uppercase px-8 py-4 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] shadow-floating">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              Get a Free Quote
+            </a>
+            <a href="services.html" class="btn-secondary inline-flex items-center justify-center gap-2 text-gray-900 font-semibold text-sm tracking-[0.1em] uppercase px-8 py-4 border border-gray-300 hover:border-brand hover:text-brand active:bg-gray-50 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]">
+              View Our Services
+            </a>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="relative order-1 lg:order-2">
+          <div class="overflow-hidden shadow-floating">
+            <div class="relative">
+              <img src="Assets/Image 4.jpg" alt="Quality workmanship by NPD Building Solutions" class="w-full h-[400px] sm:h-[500px] object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              <div class="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 sm:py-28 relative overflow-hidden grain" style="background-color: #111111;">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <p class="text-brand font-semibold text-sm tracking-wide uppercase mb-4">Ready to Get Started?</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display text-white mb-6" style="letter-spacing: -0.03em;">Let's Talk About Your Next Project</h2>
+      <p class="text-gray-400 text-base max-w-xl mx-auto mb-10" style="line-height: 1.7;">
+        Whether it's a renovation, new build, or repair, we'd love to hear from you. Give us a call or send an email for a free, no-obligation quote.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:0427278285" class="btn-primary inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-dark active:bg-brand-dark text-white font-bold text-sm tracking-[0.1em] uppercase px-8 py-4 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] shadow-floating">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          Call 0427 278 285
+        </a>
+        <a href="mailto:npdbuildingsolutions@outlook.com" class="btn-secondary inline-flex items-center justify-center gap-2 text-white font-semibold text-sm tracking-[0.1em] uppercase px-8 py-4 border border-white/40 hover:bg-white/10 active:bg-white/15 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Email Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-12" role="contentinfo">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="mb-4">
+            <a href="index.html"><span class="font-display text-2xl tracking-tight text-gray-900" style="letter-spacing: -0.02em;"><span class="text-brand">NPD</span> Building Solutions</span></a>
+          </div>
+          <p class="text-sm text-gray-500" style="line-height: 1.7;">Bairnsdale-based carpentry and renovations with 10+ years experience. Decks, pergolas, tiling, bathroom renovations, fencing, gates, custom work and more.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4">Quick Links</h4>
+          <nav class="space-y-2" aria-label="Footer navigation">
+            <a href="services.html" class="block text-sm text-gray-500 hover:text-brand transition-colors duration-200">Services</a>
+            <a href="about.html" class="block text-sm text-gray-500 hover:text-brand transition-colors duration-200">About</a>
+            <a href="index.html#gallery" class="block text-sm text-gray-500 hover:text-brand transition-colors duration-200">Our Work</a>
+            <a href="index.html#contact" class="block text-sm text-gray-500 hover:text-brand transition-colors duration-200">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4">Contact</h4>
+          <div class="space-y-2">
+            <a href="tel:0427278285" class="flex items-center gap-2 text-sm text-gray-500 hover:text-brand transition-colors duration-200">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              0427 278 285
+            </a>
+            <a href="mailto:npdbuildingsolutions@outlook.com" class="flex items-center gap-2 text-sm text-gray-500 hover:text-brand transition-colors duration-200">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              npdbuildingsolutions@outlook.com
+            </a>
+            <p class="flex items-center gap-2 text-sm text-gray-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Bairnsdale & Surrounding Areas, VIC
+            </p>
+          </div>
+          <!-- Social Links -->
+          <div class="flex items-center gap-3 mt-4">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-gray-200 flex items-center justify-center hover:bg-brand transition-colors duration-200" aria-label="Follow NPD Building Solutions on Facebook">
+              <svg class="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-200 pt-8 text-center">
+        <p class="text-xs text-gray-400">&copy; 2026 NPD Building Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

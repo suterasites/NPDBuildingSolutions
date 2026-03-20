@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | NPD Building Solutions - Carpentry & Renovations Bairnsdale</title>
+  <meta name="description" content="Full range of building services in Bairnsdale, VIC. General carpentry, bathroom renovations, decks, pergolas, tiling, fencing, gates, pool fencing and custom work. 10+ years experience.">
+  <meta name="keywords" content="carpenter Bairnsdale, renovations Bairnsdale VIC, decks Bairnsdale, pergolas, tiling, bathroom renovations, fencing, gates, pool fencing, carpentry East Gippsland, building services">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Our Services | NPD Building Solutions">
+  <meta property="og:description" content="Full range of building services in Bairnsdale, VIC. General carpentry, bathroom renovations, decks, pergolas, tiling, fencing, gates and custom work.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_AU">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "NPD Building Solutions",
+    "description": "Carpentry and renovations business based in Bairnsdale, VIC, with over 10 years of experience.",
+    "telephone": "+61427278285",
+    "email": "npdbuildingsolutions@outlook.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bairnsdale",
+      "addressRegion": "VIC",
+      "addressCountry": "AU"
+    },
+    "areaServed": [
+      { "@type": "Place", "name": "Bairnsdale" },
+      { "@type": "Place", "name": "East Gippsland" }
+    ],
+    "serviceType": ["General Carpentry", "High-Quality Tiling", "Decks", "Pergolas", "Custom Work", "Pool Fencing", "Fencing", "Gates", "Bathroom Renovations"],
+    "priceRange": "$$"
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#E8710A',
+              dark: '#CC6010',
+              light: '#F09A4E',
+              50: '#FEF5EC',
+              100: '#FDEBD4',
+            },
+          },
+          fontFamily: {
+            display: ['"Barlow Condensed"', 'Arial Narrow', 'sans-serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    h1, h2, h3, .font-display { font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; text-transform: uppercase; }
+
+    /* Grain texture overlay */
+    .grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Layered shadow system */
+    .shadow-elevated {
+      box-shadow:
+        0 1px 2px rgba(232, 113, 10, 0.04),
+        0 4px 8px rgba(232, 113, 10, 0.06),
+        0 12px 24px rgba(0, 0, 0, 0.06);
+    }
+    .shadow-floating {
+      box-shadow:
+        0 2px 4px rgba(232, 113, 10, 0.06),
+        0 8px 16px rgba(232, 113, 10, 0.08),
+        0 24px 48px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Spring-style easing */
+    .transition-spring {
+      transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* Focus visible */
+    .btn-primary:focus-visible,
+    .btn-secondary:focus-visible {
+      outline: 3px solid #E8710A;
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Navigation -->
+  <nav id="main-nav" class="fixed top-0 w-full z-50 bg-white backdrop-blur-sm border-b border-gray-200 transition-transform duration-300" role="navigation" aria-label="Main navigation">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <a href="index.html" class="flex items-center gap-2" aria-label="NPD Building Solutions home">
+          <span class="font-display text-xl sm:text-2xl tracking-tight text-gray-900" style="letter-spacing: -0.02em;"><span class="text-brand">NPD</span> Building Solutions</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="services.html" class="text-sm font-medium text-brand transition-colors duration-200">Services</a>
+          <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-brand transition-colors duration-200">About</a>
+          <a href="index.html#gallery" class="text-sm font-medium text-gray-600 hover:text-brand transition-colors duration-200">Our Work</a>
+          <a href="index.html#contact" class="text-sm font-medium text-gray-600 hover:text-brand transition-colors duration-200">Contact</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="tel:0427278285" class="btn-primary inline-flex items-center gap-2 bg-brand hover:bg-brand-dark active:bg-brand-dark text-white font-semibold text-sm px-5 py-2.5 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <span class="hidden sm:inline">0427 278 285</span>
+            <span class="sm:hidden">Call Now</span>
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 text-gray-600 hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand active:scale-95 transition-transform duration-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="md:hidden overflow-hidden transition-[max-height] duration-300 ease-out max-h-0 bg-white border-t border-gray-200">
+      <div class="px-4 py-4 flex flex-col gap-1">
+        <a href="services.html" class="mobile-nav-link block px-4 py-3 text-sm font-semibold text-brand bg-brand-50 rounded-lg transition-colors duration-200">Services</a>
+        <a href="about.html" class="mobile-nav-link block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-brand hover:bg-gray-50 active:bg-gray-100 rounded-lg transition-colors duration-200">About</a>
+        <a href="index.html#gallery" class="mobile-nav-link block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-brand hover:bg-gray-50 active:bg-gray-100 rounded-lg transition-colors duration-200">Our Work</a>
+        <a href="index.html#contact" class="mobile-nav-link block px-4 py-3 text-sm font-semibold text-gray-600 hover:text-brand hover:bg-gray-50 active:bg-gray-100 rounded-lg transition-colors duration-200">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    (function() {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const hamburger = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+      const links = menu.querySelectorAll('.mobile-nav-link');
+
+      function toggleMenu() {
+        const isOpen = menu.style.maxHeight && menu.style.maxHeight !== '0px';
+        if (isOpen) {
+          menu.style.maxHeight = '0px';
+          hamburger.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        } else {
+          menu.style.maxHeight = menu.scrollHeight + 'px';
+          hamburger.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      }
+
+      btn.addEventListener('click', toggleMenu);
+
+      links.forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.style.maxHeight = '0px';
+          hamburger.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+
+  <script>
+    (function() {
+      var nav = document.getElementById('main-nav');
+      var lastScroll = 0;
+      window.addEventListener('scroll', function() {
+        var current = window.scrollY;
+        if (current > lastScroll && current > 80) {
+          nav.style.transform = 'translateY(-100%)';
+        } else {
+          nav.style.transform = 'translateY(0)';
+        }
+        lastScroll = current;
+      });
+    })();
+  </script>
+
+  <!-- Page Hero -->
+  <section class="relative pt-32 sm:pt-40 pb-16 sm:pb-20 bg-gray-900 overflow-hidden grain">
+    <div class="absolute inset-0">
+      <img src="Assets/Image 1 - Hero.jpg" alt="NPD Building Solutions services" class="w-full h-full object-cover opacity-30" loading="eager">
+      <div class="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/60 to-gray-900/90"></div>
+      <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-2xl">
+        <p class="text-brand font-semibold text-xs tracking-[0.2em] uppercase mb-3">What We Do</p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display text-white leading-[0.95] mb-6" style="letter-spacing: -0.03em;">Our Services</h1>
+        <p class="text-gray-300 text-base max-w-lg" style="line-height: 1.7;">From general carpentry to full bathroom renovations, we deliver high-quality building solutions across Bairnsdale and surrounding areas with over 10 years of experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="py-20 sm:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Service 1: General Carpentry -->
+      <div id="general-carpentry" class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-24 sm:mb-32">
+        <div class="relative">
+          <div class="overflow-hidden shadow-floating">
+            <div class="relative">
+              <img src="https://placehold.co/640x480?text=General+Carpentry" alt="General carpentry work by NPD Building Solutions in Bairnsdale" class="w-full h-[350px] sm:h-[420px] object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              <div class="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-brand/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+            </div>
+            <p class="text-brand font-semibold text-sm tracking-wide uppercase">Core Service</p>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display text-gray-900 mb-4" style="letter-spacing: -0.03em;">General Carpentry</h2>
+          <p class="text-gray-600 mb-6" style="line-height: 1.7;">With over 10 years of hands-on experience, we handle all aspects of carpentry. From structural framing to detailed finishing work, every job gets the same level of care and precision. Whether it's a small repair or a full-scale build, we bring quality craftsmanship to every project.</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Structural carpentry, framing and roof work
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Repairs, maintenance and restoration
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Interior fit-outs and finishing details
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Door and window installation
+            </li>
+          </ul>
+          <a href="tel:0427278285" class="btn-primary inline-flex items-center gap-2 bg-brand hover:bg-brand-dark active:bg-brand-dark text-white font-bold text-sm tracking-[0.1em] uppercase px-8 py-4 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] shadow-elevated">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Get a Free Quote
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 2: Bathroom Renovations -->
+      <div id="bathroom-renovations" class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-24 sm:mb-32">
+        <div class="order-1 lg:order-2 relative">
+          <div class="overflow-hidden shadow-floating">
+            <div class="relative">
+              <img src="https://placehold.co/640x480?text=Bathroom+Renovations" alt="Bathroom renovation by NPD Building Solutions" class="w-full h-[350px] sm:h-[420px] object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              <div class="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
+            </div>
+          </div>
+          <!-- Badge -->
+          <div class="absolute -bottom-4 -left-4 lg:-left-6 bg-brand text-white px-5 py-3 shadow-floating z-10">
+            <p class="font-display text-2xl leading-none" style="letter-spacing: -0.02em;">16</p>
+            <p class="text-xs font-medium mt-0.5 opacity-90">Bathrooms in 14 months</p>
+          </div>
+        </div>
+        <div class="order-2 lg:order-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-brand/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            </div>
+            <p class="text-brand font-semibold text-sm tracking-wide uppercase">Standout Service</p>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display text-gray-900 mb-4" style="letter-spacing: -0.03em;">Bathroom Renovations</h2>
+          <p class="text-gray-600 mb-6" style="line-height: 1.7;">Bathroom renovations are a standout part of our work. Working alongside Cutting Edge Constructions, we completed 16 quality bathrooms in just 14 months, delivering consistent, high-quality results every time. From full strip-outs to the final tile, we manage the entire process with attention to detail.</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Complete bathroom renovations from start to finish
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Professional tiling, waterproofing and fit-out
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Plumbing coordination and fixture installation
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              High attention to detail on every renovation
+            </li>
+          </ul>
+          <a href="tel:0427278285" class="btn-primary inline-flex items-center gap-2 bg-brand hover:bg-brand-dark active:bg-brand-dark text-white font-bold text-sm tracking-[0.1em] uppercase px-8 py-4 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] shadow-elevated">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Get a Free Quote
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 3: Decks & Pergolas -->
+      <div id="decks-pergolas" class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-24 sm:mb-32">
+        <div class="relative">
+          <div class="overflow-hidden shadow-floating">
+            <div class="relative">
+              <img src="https://placehold.co/640x480?text=Decks+%26+Pergolas" alt="Custom deck and pergola built by NPD Building Solutions" class="w-full h-[350px] sm:h-[420px] object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              <div class="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-brand/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+            </div>
+            <p class="text-brand font-semibold text-sm tracking-wide uppercase">Outdoor Living</p>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display text-gray-900 mb-4" style="letter-spacing: -0.03em;">Decks & Pergolas</h2>
+          <p class="text-gray-600 mb-6" style="line-height: 1.7;">Custom-built decks and pergolas designed to suit your home and lifestyle. We work with you on the design and build to last using quality materials and solid craftsmanship. Whether you want a simple entertaining area or a full outdoor living space, we make it happen.</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Timber and composite decking options
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Custom pergola design and construction
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Outdoor entertaining and alfresco areas
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Repairs, restoring and refinishing existing decks
+            </li>
+          </ul>
+          <a href="tel:0427278285" class="btn-primary inline-flex items-center gap-2 bg-brand hover:bg-brand-dark active:bg-brand-dark text-white font-bold text-sm tracking-[0.1em] uppercase px-8 py-4 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] shadow-elevated">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Get a Free Quote
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 4: High-Quality Tiling -->
+      <div id="tiling" class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-24 sm:mb-32">
+        <div class="order-1 lg:order-2 relative">
+          <div class="overflow-hidden shadow-floating">
+            <div class="relative">
+              <img src="https://placehold.co/640x480?text=High-Quality+Tiling" alt="Professional tiling work by NPD Building Solutions" class="w-full h-[350px] sm:h-[420px] object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              <div class="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
+            </div>
+          </div>
+        </div>
+        <div class="order-2 lg:order-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-brand/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+            </div>
+            <p class="text-brand font-semibold text-sm tracking-wide uppercase">Precision Work</p>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display text-gray-900 mb-4" style="letter-spacing: -0.03em;">High-Quality Tiling</h2>
+          <p class="text-gray-600 mb-6" style="line-height: 1.7;">Precision tiling for bathrooms, kitchens, laundries and outdoor areas. Clean lines, proper prep and a finish you can be proud of. We take the time to get it right because quality tiling makes all the difference in the final result.</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Floor and wall tiling for any room
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Bathroom and kitchen splashback tiling
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Waterproofing and surface preparation
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Outdoor and patio tiling
+            </li>
+          </ul>
+          <a href="tel:0427278285" class="btn-primary inline-flex items-center gap-2 bg-brand hover:bg-brand-dark active:bg-brand-dark text-white font-bold text-sm tracking-[0.1em] uppercase px-8 py-4 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] shadow-elevated">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Get a Free Quote
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 5: Fencing, Gates & Pool Fencing -->
+      <div id="fencing-gates" class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-24 sm:mb-32">
+        <div class="relative">
+          <div class="overflow-hidden shadow-floating">
+            <div class="relative">
+              <img src="https://placehold.co/640x480?text=Fencing+%26+Gates" alt="Fencing and gate installation by NPD Building Solutions" class="w-full h-[350px] sm:h-[420px] object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              <div class="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-brand/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <p class="text-brand font-semibold text-sm tracking-wide uppercase">Property Security</p>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display text-gray-900 mb-4" style="letter-spacing: -0.03em;">Fencing, Gates & Pool Fencing</h2>
+          <p class="text-gray-600 mb-6" style="line-height: 1.7;">Durable fencing and gates built to secure your property and look great. We work with timber, Colorbond and custom materials to match your home. We also install compliant pool fencing to keep your family safe and meet local regulations.</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Timber and Colorbond fencing
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Custom gates, entries and driveways
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Compliant pool fencing and safety gates
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Fence repairs and replacement
+            </li>
+          </ul>
+          <a href="tel:0427278285" class="btn-primary inline-flex items-center gap-2 bg-brand hover:bg-brand-dark active:bg-brand-dark text-white font-bold text-sm tracking-[0.1em] uppercase px-8 py-4 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] shadow-elevated">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Get a Free Quote
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 6: Custom Work -->
+      <div id="custom-work" class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="order-1 lg:order-2 relative">
+          <div class="overflow-hidden shadow-floating">
+            <div class="relative">
+              <img src="https://placehold.co/640x480?text=Custom+Work" alt="Custom building work by NPD Building Solutions" class="w-full h-[350px] sm:h-[420px] object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              <div class="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
+            </div>
+          </div>
+        </div>
+        <div class="order-2 lg:order-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-brand/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
+            </div>
+            <p class="text-brand font-semibold text-sm tracking-wide uppercase">Bespoke Solutions</p>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display text-gray-900 mb-4" style="letter-spacing: -0.03em;">Custom Work</h2>
+          <p class="text-gray-600 mb-6" style="line-height: 1.7;">Got a unique project in mind? We love a challenge. From custom joinery to one-off builds, we'll work with you to bring your vision to life. No job is too unusual - if you can dream it, we can build it.</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Custom joinery and cabinetry
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Bespoke builds and feature pieces
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Shelving, storage and built-in solutions
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-600" style="line-height: 1.7;">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Tailored to your exact requirements
+            </li>
+          </ul>
+          <a href="tel:0427278285" class="btn-primary inline-flex items-center gap-2 bg-brand hover:bg-brand-dark active:bg-brand-dark text-white font-bold text-sm tracking-[0.1em] uppercase px-8 py-4 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] shadow-elevated">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Get a Free Quote
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 sm:py-28 relative overflow-hidden" style="background-color: #E8710A;" aria-label="Call to action">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display text-white mb-6" style="letter-spacing: -0.03em;">Ready to Start Your Next Project?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-xl mx-auto" style="line-height: 1.7;">
+        Get a free quote today. Call us directly, send an email, or message us on Facebook.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:0427278285" class="btn-primary inline-flex items-center justify-center gap-3 bg-gray-900 hover:bg-gray-800 active:bg-gray-950 text-white font-bold text-lg px-10 py-5 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] shadow-floating">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          Call 0427 278 285
+        </a>
+        <a href="mailto:npdbuildingsolutions@outlook.com" class="btn-secondary inline-flex items-center justify-center gap-3 bg-white hover:bg-gray-100 active:bg-gray-200 text-gray-900 font-semibold text-lg px-10 py-5 border border-white transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Email Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-12" role="contentinfo">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="mb-4">
+            <a href="index.html"><span class="font-display text-2xl tracking-tight text-gray-900" style="letter-spacing: -0.02em;"><span class="text-brand">NPD</span> Building Solutions</span></a>
+          </div>
+          <p class="text-sm text-gray-500" style="line-height: 1.7;">Bairnsdale-based carpentry and renovations with 10+ years experience. Decks, pergolas, tiling, bathroom renovations, fencing, gates, custom work and more.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4">Quick Links</h4>
+          <nav class="space-y-2" aria-label="Footer navigation">
+            <a href="services.html" class="block text-sm text-gray-500 hover:text-brand transition-colors duration-200">Services</a>
+            <a href="about.html" class="block text-sm text-gray-500 hover:text-brand transition-colors duration-200">About</a>
+            <a href="index.html#gallery" class="block text-sm text-gray-500 hover:text-brand transition-colors duration-200">Our Work</a>
+            <a href="index.html#contact" class="block text-sm text-gray-500 hover:text-brand transition-colors duration-200">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4">Contact</h4>
+          <div class="space-y-2">
+            <a href="tel:0427278285" class="flex items-center gap-2 text-sm text-gray-500 hover:text-brand transition-colors duration-200">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              0427 278 285
+            </a>
+            <a href="mailto:npdbuildingsolutions@outlook.com" class="flex items-center gap-2 text-sm text-gray-500 hover:text-brand transition-colors duration-200">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              npdbuildingsolutions@outlook.com
+            </a>
+            <p class="flex items-center gap-2 text-sm text-gray-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Bairnsdale & Surrounding Areas, VIC
+            </p>
+          </div>
+          <!-- Social Links -->
+          <div class="flex items-center gap-3 mt-4">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-gray-200 flex items-center justify-center hover:bg-brand transition-colors duration-200" aria-label="Follow NPD Building Solutions on Facebook">
+              <svg class="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-200 pt-8 text-center">
+        <p class="text-xs text-gray-400">&copy; 2026 NPD Building Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
