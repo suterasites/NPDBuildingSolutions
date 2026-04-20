@@ -85,9 +85,10 @@
 - **Depth:** Surfaces should have a layering system (base → elevated → floating), not all sit at the same z-plane.
 
 ## Deployment
-- **Always deploy changes to GitHub and Vercel** after making code changes.
+- **Always deploy changes to GitHub** after making code changes. Cloudflare Pages auto-deploys from the `main` branch.
 - Git remote: `origin` (check with `git remote -v` for current URL)
-- Push to `main` branch, then deploy to Vercel with `vercel --prod --yes`.
+- Push to `main` branch - Cloudflare Pages will automatically build and deploy.
+- Live URLs: `npdbuildingsolutions.com.au`, `www.npdbuildingsolutions.com.au`, `npdbuildingsolutions.pages.dev`
 
 ## Multi-Page Consistency
 - **Navbar:** The navbar must be identical across all pages. If the navbar is modified on any page, apply the same change to every other page immediately.
