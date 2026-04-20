@@ -44,7 +44,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
   <style>
     html { scroll-behavior: smooth; }
@@ -92,7 +94,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 sm:h-20">
         <a href="/" class="flex items-center gap-2" aria-label="NPD Building Solutions home">
-          <img src="Assets/Logo.jpg" alt="NPD Building Solutions" class="h-10 sm:h-12">
+          <picture><source type="image/webp" srcset="Assets/optimized/Logo-200.webp 200w, Assets/optimized/Logo-400.webp 400w" sizes="(max-width: 640px) 100vw, 800px"><img src="Assets/Logo.jpg" alt="NPD Building Solutions" width="797" height="386" loading="lazy" decoding="async" class="h-10 sm:h-12"></picture>
         </a>
         <div class="hidden md:flex items-center gap-8">
           <div class="relative group">
@@ -233,7 +235,7 @@
   <!-- Page Hero -->
   <section class="relative pt-32 sm:pt-40 pb-16 sm:pb-20 bg-gray-900 overflow-hidden grain">
     <div class="absolute inset-0">
-      <img src="Assets/Pergola Build.jpg" alt="Fencing and gate services by NPD Building Solutions" class="w-full h-full object-cover opacity-30" loading="eager">
+      <picture><source type="image/webp" srcset="Assets/optimized/Pergola%20Build-400.webp 400w, Assets/optimized/Pergola%20Build-800.webp 800w" sizes="(max-width: 640px) 100vw, 800px"><img src="Assets/Pergola Build.jpg" alt="Fencing and gate services by NPD Building Solutions" width="1536" height="2048" loading="eager" fetchpriority="high" decoding="sync" class="w-full h-full object-cover opacity-30"></picture>
       <div class="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/60 to-gray-900/90"></div>
       <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
     </div>
@@ -368,7 +370,7 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
         <div>
           <div class="mb-4">
-            <a href="/"><img src="Assets/Logo.jpg" alt="NPD Building Solutions" class="h-12"></a>
+            <a href="/"><picture><source type="image/webp" srcset="Assets/optimized/Logo-200.webp 200w, Assets/optimized/Logo-400.webp 400w" sizes="(max-width: 640px) 100vw, 800px"><img src="Assets/Logo.jpg" alt="NPD Building Solutions" width="797" height="386" loading="lazy" decoding="async" class="h-12"></picture></a>
           </div>
           <p class="text-sm text-gray-600" style="line-height: 1.7;">Bairnsdale-based carpentry and renovations with 10+ years experience. Decks, pergolas, tiling, bathroom renovations, fencing, gates, custom work and more.</p>
         </div>

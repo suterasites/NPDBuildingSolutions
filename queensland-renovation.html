@@ -45,7 +45,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
   <style>
     html { scroll-behavior: smooth; }
@@ -117,7 +119,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 sm:h-20">
         <a href="/" class="flex items-center gap-2" aria-label="NPD Building Solutions home">
-          <img src="Assets/Logo.jpg" alt="NPD Building Solutions" class="h-10 sm:h-12">
+          <picture><source type="image/webp" srcset="Assets/optimized/Logo-200.webp 200w, Assets/optimized/Logo-400.webp 400w" sizes="(max-width: 640px) 100vw, 800px"><img src="Assets/Logo.jpg" alt="NPD Building Solutions" width="797" height="386" loading="lazy" decoding="async" class="h-10 sm:h-12"></picture>
         </a>
         <div class="hidden md:flex items-center gap-8">
           <div class="relative group">
@@ -259,7 +261,7 @@
   <!-- Page Hero -->
   <section class="relative pt-32 sm:pt-40 pb-16 sm:pb-20 bg-gray-900 overflow-hidden grain">
     <div class="absolute inset-0">
-      <img src="Assets/Major Project/Interior Renovation - Open Plan Living.jpg" alt="Queensland full home renovation by NPD Building Solutions" class="w-full h-full object-cover opacity-30" loading="eager">
+      <picture><source type="image/webp" srcset="Assets/optimized/Major%20Project/Interior%20Renovation%20-%20Open%20Plan%20Living-400.webp 400w, Assets/optimized/Major%20Project/Interior%20Renovation%20-%20Open%20Plan%20Living-800.webp 800w, Assets/optimized/Major%20Project/Interior%20Renovation%20-%20Open%20Plan%20Living-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1600px"><img src="Assets/Major Project/Interior Renovation - Open Plan Living.jpg" alt="Queensland full home renovation by NPD Building Solutions" width="4032" height="3024" loading="eager" fetchpriority="high" decoding="sync" class="w-full h-full object-cover opacity-30"></picture>
       <div class="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/60 to-gray-900/90"></div>
       <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
     </div>
@@ -310,7 +312,7 @@
         <div class="grid sm:grid-cols-2 gap-4 sm:gap-6">
           <div class="group cursor-pointer overflow-hidden shadow-elevated hover:shadow-floating transition-shadow duration-300" onclick="openLightbox(this.querySelector('img').src)">
             <div class="relative overflow-hidden">
-              <img src="Assets/Major Project/Kitchen Renovation - Island Bench.jpg" alt="Kitchen renovation with island bench" class="w-full h-64 sm:h-80 object-cover transition-transform duration-300 group-hover:scale-[1.03]" loading="lazy">
+              <picture><source type="image/webp" srcset="Assets/optimized/Major%20Project/Kitchen%20Renovation%20-%20Island%20Bench-400.webp 400w" sizes="400px"><img src="Assets/Major Project/Kitchen Renovation - Island Bench.jpg" alt="Kitchen renovation with island bench" width="480" height="640" loading="lazy" decoding="async" class="w-full h-64 sm:h-80 object-cover transition-transform duration-300 group-hover:scale-[1.03]"></picture>
               <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
               <div class="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
               <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
@@ -320,7 +322,7 @@
           </div>
           <div class="group cursor-pointer overflow-hidden shadow-elevated hover:shadow-floating transition-shadow duration-300" onclick="openLightbox(this.querySelector('img').src)">
             <div class="relative overflow-hidden">
-              <img src="Assets/Major Project/Kitchen Renovation - Balcony View.jpg" alt="Kitchen renovation with balcony view" class="w-full h-64 sm:h-80 object-cover transition-transform duration-300 group-hover:scale-[1.03]" loading="lazy">
+              <picture><source type="image/webp" srcset="Assets/optimized/Major%20Project/Kitchen%20Renovation%20-%20Balcony%20View-400.webp 400w, Assets/optimized/Major%20Project/Kitchen%20Renovation%20-%20Balcony%20View-800.webp 800w, Assets/optimized/Major%20Project/Kitchen%20Renovation%20-%20Balcony%20View-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1600px"><img src="Assets/Major Project/Kitchen Renovation - Balcony View.jpg" alt="Kitchen renovation with balcony view" width="3024" height="4032" loading="lazy" decoding="async" class="w-full h-64 sm:h-80 object-cover transition-transform duration-300 group-hover:scale-[1.03]"></picture>
               <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
               <div class="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
               <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
@@ -337,7 +339,7 @@
         <div class="grid sm:grid-cols-3 gap-4 sm:gap-6">
           <div class="group cursor-pointer overflow-hidden shadow-elevated hover:shadow-floating transition-shadow duration-300" onclick="openLightbox(this.querySelector('img').src)">
             <div class="relative overflow-hidden">
-              <img src="Assets/Major Project/Bathroom Renovation - Shower and Vanity.jpg" alt="Bathroom renovation - shower and vanity" class="w-full h-64 sm:h-72 object-cover transition-transform duration-300 group-hover:scale-[1.03]" loading="lazy">
+              <picture><source type="image/webp" srcset="Assets/optimized/Major%20Project/Bathroom%20Renovation%20-%20Shower%20and%20Vanity-400.webp 400w, Assets/optimized/Major%20Project/Bathroom%20Renovation%20-%20Shower%20and%20Vanity-800.webp 800w, Assets/optimized/Major%20Project/Bathroom%20Renovation%20-%20Shower%20and%20Vanity-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1600px"><img src="Assets/Major Project/Bathroom Renovation - Shower and Vanity.jpg" alt="Bathroom renovation - shower and vanity" width="3024" height="4032" loading="lazy" decoding="async" class="w-full h-64 sm:h-72 object-cover transition-transform duration-300 group-hover:scale-[1.03]"></picture>
               <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
               <div class="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
               <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
@@ -347,7 +349,7 @@
           </div>
           <div class="group cursor-pointer overflow-hidden shadow-elevated hover:shadow-floating transition-shadow duration-300" onclick="openLightbox(this.querySelector('img').src)">
             <div class="relative overflow-hidden">
-              <img src="Assets/Major Project/Bathroom Renovation - Toilet and Vanity.jpg" alt="Bathroom renovation - toilet and vanity" class="w-full h-64 sm:h-72 object-cover transition-transform duration-300 group-hover:scale-[1.03]" loading="lazy">
+              <picture><source type="image/webp" srcset="Assets/optimized/Major%20Project/Bathroom%20Renovation%20-%20Toilet%20and%20Vanity-400.webp 400w, Assets/optimized/Major%20Project/Bathroom%20Renovation%20-%20Toilet%20and%20Vanity-800.webp 800w, Assets/optimized/Major%20Project/Bathroom%20Renovation%20-%20Toilet%20and%20Vanity-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1600px"><img src="Assets/Major Project/Bathroom Renovation - Toilet and Vanity.jpg" alt="Bathroom renovation - toilet and vanity" width="3024" height="4032" loading="lazy" decoding="async" class="w-full h-64 sm:h-72 object-cover transition-transform duration-300 group-hover:scale-[1.03]"></picture>
               <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
               <div class="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
               <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
@@ -357,7 +359,7 @@
           </div>
           <div class="group cursor-pointer overflow-hidden shadow-elevated hover:shadow-floating transition-shadow duration-300" onclick="openLightbox(this.querySelector('img').src)">
             <div class="relative overflow-hidden">
-              <img src="Assets/Major Project/Bathroom Renovation - Vanity Detail.jpg" alt="Bathroom renovation - vanity detail" class="w-full h-64 sm:h-72 object-cover transition-transform duration-300 group-hover:scale-[1.03]" loading="lazy">
+              <picture><source type="image/webp" srcset="Assets/optimized/Major%20Project/Bathroom%20Renovation%20-%20Vanity%20Detail-400.webp 400w, Assets/optimized/Major%20Project/Bathroom%20Renovation%20-%20Vanity%20Detail-800.webp 800w, Assets/optimized/Major%20Project/Bathroom%20Renovation%20-%20Vanity%20Detail-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1600px"><img src="Assets/Major Project/Bathroom Renovation - Vanity Detail.jpg" alt="Bathroom renovation - vanity detail" width="3024" height="4032" loading="lazy" decoding="async" class="w-full h-64 sm:h-72 object-cover transition-transform duration-300 group-hover:scale-[1.03]"></picture>
               <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
               <div class="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
               <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
@@ -374,7 +376,7 @@
         <div class="grid sm:grid-cols-3 gap-4 sm:gap-6">
           <div class="group cursor-pointer overflow-hidden shadow-elevated hover:shadow-floating transition-shadow duration-300" onclick="openLightbox(this.querySelector('img').src)">
             <div class="relative overflow-hidden">
-              <img src="Assets/Major Project/Interior Renovation - Open Plan Living.jpg" alt="Interior renovation - open plan living" class="w-full h-64 sm:h-72 object-cover transition-transform duration-300 group-hover:scale-[1.03]" loading="lazy">
+              <picture><source type="image/webp" srcset="Assets/optimized/Major%20Project/Interior%20Renovation%20-%20Open%20Plan%20Living-400.webp 400w, Assets/optimized/Major%20Project/Interior%20Renovation%20-%20Open%20Plan%20Living-800.webp 800w, Assets/optimized/Major%20Project/Interior%20Renovation%20-%20Open%20Plan%20Living-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1600px"><img src="Assets/Major Project/Interior Renovation - Open Plan Living.jpg" alt="Interior renovation - open plan living" width="4032" height="3024" loading="lazy" decoding="async" class="w-full h-64 sm:h-72 object-cover transition-transform duration-300 group-hover:scale-[1.03]"></picture>
               <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
               <div class="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
               <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
@@ -384,7 +386,7 @@
           </div>
           <div class="group cursor-pointer overflow-hidden shadow-elevated hover:shadow-floating transition-shadow duration-300" onclick="openLightbox(this.querySelector('img').src)">
             <div class="relative overflow-hidden">
-              <img src="Assets/Major Project/Interior Renovation - Kitchen and Dining.jpg" alt="Interior renovation - kitchen and dining" class="w-full h-64 sm:h-72 object-cover transition-transform duration-300 group-hover:scale-[1.03]" loading="lazy">
+              <picture><source type="image/webp" srcset="Assets/optimized/Major%20Project/Interior%20Renovation%20-%20Kitchen%20and%20Dining-400.webp 400w, Assets/optimized/Major%20Project/Interior%20Renovation%20-%20Kitchen%20and%20Dining-800.webp 800w, Assets/optimized/Major%20Project/Interior%20Renovation%20-%20Kitchen%20and%20Dining-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1600px"><img src="Assets/Major Project/Interior Renovation - Kitchen and Dining.jpg" alt="Interior renovation - kitchen and dining" width="4032" height="3024" loading="lazy" decoding="async" class="w-full h-64 sm:h-72 object-cover transition-transform duration-300 group-hover:scale-[1.03]"></picture>
               <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
               <div class="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
               <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
@@ -394,7 +396,7 @@
           </div>
           <div class="group cursor-pointer overflow-hidden shadow-elevated hover:shadow-floating transition-shadow duration-300" onclick="openLightbox(this.querySelector('img').src)">
             <div class="relative overflow-hidden">
-              <img src="Assets/Major Project/Interior Renovation - Living Room.jpg" alt="Interior renovation - living room" class="w-full h-64 sm:h-72 object-cover transition-transform duration-300 group-hover:scale-[1.03]" loading="lazy">
+              <picture><source type="image/webp" srcset="Assets/optimized/Major%20Project/Interior%20Renovation%20-%20Living%20Room-400.webp 400w, Assets/optimized/Major%20Project/Interior%20Renovation%20-%20Living%20Room-800.webp 800w, Assets/optimized/Major%20Project/Interior%20Renovation%20-%20Living%20Room-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1600px"><img src="Assets/Major Project/Interior Renovation - Living Room.jpg" alt="Interior renovation - living room" width="4032" height="3024" loading="lazy" decoding="async" class="w-full h-64 sm:h-72 object-cover transition-transform duration-300 group-hover:scale-[1.03]"></picture>
               <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
               <div class="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
               <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
@@ -458,7 +460,7 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
         <div>
           <div class="mb-4">
-            <a href="/"><img src="Assets/Logo.jpg" alt="NPD Building Solutions" class="h-12"></a>
+            <a href="/"><picture><source type="image/webp" srcset="Assets/optimized/Logo-200.webp 200w, Assets/optimized/Logo-400.webp 400w" sizes="(max-width: 640px) 100vw, 800px"><img src="Assets/Logo.jpg" alt="NPD Building Solutions" width="797" height="386" loading="lazy" decoding="async" class="h-12"></picture></a>
           </div>
           <p class="text-sm text-gray-300" style="line-height: 1.7;">Bairnsdale-based carpentry and renovations with 10+ years experience. Decks, pergolas, tiling, bathroom renovations, fencing, gates, custom work and more.</p>
         </div>
