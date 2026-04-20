@@ -40,6 +40,7 @@
   }
   </script>
 
+  <link rel="preload" as="image" imagesrcset="Assets/optimized/Pergola%20Build-400.webp 400w, Assets/optimized/Pergola%20Build-800.webp 800w" imagesizes="(max-width: 640px) 100vw, 800px" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="/styles.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,7 +95,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 sm:h-20">
         <a href="/" class="flex items-center gap-2" aria-label="NPD Building Solutions home">
-          <picture><source type="image/webp" srcset="Assets/optimized/Logo-200.webp 200w, Assets/optimized/Logo-400.webp 400w" sizes="(max-width: 640px) 100vw, 800px"><img src="Assets/Logo.jpg" alt="NPD Building Solutions" width="797" height="386" loading="lazy" decoding="async" class="h-10 sm:h-12"></picture>
+          <picture><source type="image/webp" srcset="Assets/optimized/Logo-200.webp 200w, Assets/optimized/Logo-400.webp 400w" sizes="(max-width: 640px) 100vw, 800px"><img src="Assets/Logo.jpg" alt="NPD Building Solutions" width="797" height="386" loading="lazy" decoding="async" class="h-10 sm:h-12 w-auto"></picture>
         </a>
         <div class="hidden md:flex items-center gap-8">
           <div class="relative group">
@@ -179,39 +180,72 @@
       </div>
     </div>
   </nav>
-
   <script>
     (function() {
       const btn = document.getElementById('mobile-menu-btn');
       const menu = document.getElementById('mobile-menu');
       const hamburger = document.getElementById('hamburger-icon');
       const closeIcon = document.getElementById('close-icon');
-      const links = menu.querySelectorAll('.mobile-nav-link');
+      const servicesBtn = document.getElementById('mobile-services-toggle');
+      const servicesPanel = document.getElementById('mobile-services-panel');
+      const servicesChevron = document.getElementById('mobile-services-chevron');
+      if (!btn || !menu) return;
+
+      function closeMenu() {
+        // Lock to current height so we can animate to 0
+        menu.style.maxHeight = menu.scrollHeight + 'px';
+        requestAnimationFrame(function() {
+          menu.style.maxHeight = '0px';
+        });
+        hamburger.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        if (servicesPanel) {
+          servicesPanel.style.maxHeight = '0px';
+          servicesChevron && servicesChevron.classList.remove('rotate-180');
+          servicesBtn && servicesBtn.setAttribute('aria-expanded', 'false');
+        }
+      }
+
+      function openMenu() {
+        menu.style.maxHeight = menu.scrollHeight + 'px';
+        // After the open transition finishes, release the height so nested panels can grow.
+        const onEnd = function(e) {
+          if (e.target !== menu || e.propertyName !== 'max-height') return;
+          menu.style.maxHeight = 'none';
+          menu.removeEventListener('transitionend', onEnd);
+        };
+        menu.addEventListener('transitionend', onEnd);
+        hamburger.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      }
 
       function toggleMenu() {
-        const isOpen = menu.style.maxHeight && menu.style.maxHeight !== '0px';
-        if (isOpen) {
-          menu.style.maxHeight = '0px';
-          hamburger.classList.remove('hidden');
-          closeIcon.classList.add('hidden');
-          btn.setAttribute('aria-expanded', 'false');
-        } else {
-          menu.style.maxHeight = menu.scrollHeight + 'px';
-          hamburger.classList.add('hidden');
-          closeIcon.classList.remove('hidden');
-          btn.setAttribute('aria-expanded', 'true');
-        }
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        if (isOpen) closeMenu(); else openMenu();
       }
 
       btn.addEventListener('click', toggleMenu);
 
-      links.forEach(function(link) {
-        link.addEventListener('click', function() {
-          menu.style.maxHeight = '0px';
-          hamburger.classList.remove('hidden');
-          closeIcon.classList.add('hidden');
-          btn.setAttribute('aria-expanded', 'false');
+      if (servicesBtn && servicesPanel) {
+        servicesBtn.addEventListener('click', function() {
+          const open = servicesBtn.getAttribute('aria-expanded') === 'true';
+          if (open) {
+            servicesPanel.style.maxHeight = servicesPanel.scrollHeight + 'px';
+            requestAnimationFrame(function() { servicesPanel.style.maxHeight = '0px'; });
+            servicesChevron && servicesChevron.classList.remove('rotate-180');
+            servicesBtn.setAttribute('aria-expanded', 'false');
+          } else {
+            servicesPanel.style.maxHeight = servicesPanel.scrollHeight + 'px';
+            servicesChevron && servicesChevron.classList.add('rotate-180');
+            servicesBtn.setAttribute('aria-expanded', 'true');
+          }
         });
+      }
+
+      menu.querySelectorAll('a.mobile-nav-link').forEach(function(link) {
+        link.addEventListener('click', closeMenu);
       });
     })();
   </script>
@@ -370,7 +404,7 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
         <div>
           <div class="mb-4">
-            <a href="/"><picture><source type="image/webp" srcset="Assets/optimized/Logo-200.webp 200w, Assets/optimized/Logo-400.webp 400w" sizes="(max-width: 640px) 100vw, 800px"><img src="Assets/Logo.jpg" alt="NPD Building Solutions" width="797" height="386" loading="lazy" decoding="async" class="h-12"></picture></a>
+            <a href="/"><picture><source type="image/webp" srcset="Assets/optimized/Logo-200.webp 200w, Assets/optimized/Logo-400.webp 400w" sizes="(max-width: 640px) 100vw, 800px"><img src="Assets/Logo.jpg" alt="NPD Building Solutions" width="797" height="386" loading="lazy" decoding="async" class="h-12 w-auto"></picture></a>
           </div>
           <p class="text-sm text-gray-600" style="line-height: 1.7;">Bairnsdale-based carpentry and renovations with 10+ years experience. Decks, pergolas, tiling, bathroom renovations, fencing, gates, custom work and more.</p>
         </div>
