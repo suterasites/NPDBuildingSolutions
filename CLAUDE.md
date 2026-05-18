@@ -68,6 +68,14 @@
 - Placeholder images: `https://placehold.co/WIDTHxHEIGHT`
 - Mobile-first responsive
 
+## Production Landing Pages (Google Ads / Paid Traffic)
+The mockup defaults above DO NOT apply to pages that will receive paid traffic. Lighthouse mobile score directly affects Google Ads Quality Score / CPC, so apply this from the start:
+- **No `cdn.tailwindcss.com`** - use the precompiled `/styles.css`, or inline it into the page if under ~40 KiB.
+- **Self-host woff2 fonts** in `Assets/fonts/`. No `fonts.googleapis.com` / `fonts.gstatic.com` requests. Preload the critical files with `<link rel="preload" as="font" type="font/woff2" ... crossorigin>` + inline `@font-face`.
+- **Trim font weights** to only what the page uses (audit `font-*` classes). Use Inter as variable font - one woff2 covers weights 400-700.
+- **Images:** explicit `width`/`height` attrs or `aspect-[]` on the container, `loading="eager" fetchpriority="high"` only on the hero, `loading="lazy"` on the rest.
+- **Rebuilding `/styles.css`:** standalone Tailwind CLI works without node - `/tmp/tailwindcss -i input.css -o styles.css --minify` (download from tailwindlabs/tailwindcss releases if not present).
+
 ## Brand Assets
 - Always check the `brand_assets/` folder before designing. It may contain logos, color guides, style guides, or images.
 - If assets exist there, use them. Do not use placeholders where real assets are available.
