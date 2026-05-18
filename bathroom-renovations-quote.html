@@ -101,23 +101,22 @@
   </script>
 
   <!--
-    Google tag (gtag.js)
-    REQUIRED PRE-LAUNCH: replace the placeholder IDs with real values from Nathan's Google Ads account.
-    - GA4_MEASUREMENT_ID (G-XXXXXXXXXX): create a fresh GA4 property for npdbuildingsolutions.com.au
-    - AW_CONVERSION_ID (AW-XXXXXXXXXX): from Nathan's Google Ads account Tools > Conversions
-    - PHONE_CONVERSION_LABEL: Phone Call Lead conversion action label (SEPARATE from Form Lead - Grout lesson)
-    - FORM_CONVERSION_LABEL is on the /thank-you page (fires post-Formspree redirect)
-    Verify with Tag Assistant on day 1 that the LIVE account ID is firing.
+    Google tag (gtag.js) - Nathan's Google Ads account (NPD Building Solutions).
+    Installed 2026-05-18 with AW-18059912449. STILL TO DO:
+    - Create Form Lead conversion action, replace FORM_CONVERSION_LABEL placeholder on /thank-you
+    - Create Phone Call Lead conversion action, replace PHONE_CONVERSION_LABEL placeholder below
+    - Optionally add a GA4 property and config call here once it exists
+    Until labels are swapped, the gtag still captures GCLID into _gcl_aw for attribution,
+    but the per-event conversion firing in the page script below will hit unknown labels
+    and Google will silently drop those events.
   -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW_CONVERSION_ID"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18059912449"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'AW_CONVERSION_ID');
-    gtag('config', 'GA4_MEASUREMENT_ID');
+    gtag('config', 'AW-18059912449');
   </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA4_MEASUREMENT_ID"></script>
 
   <script>
     // Defer Elfsight reviews widget until first user interaction (kept lazy; not conversion-critical).
@@ -705,7 +704,7 @@
       el.addEventListener('click', function() {
         if (typeof gtag === 'function') {
           gtag('event', 'conversion', {
-            'send_to': 'AW_CONVERSION_ID/PHONE_CONVERSION_LABEL',
+            'send_to': 'AW-18059912449/PHONE_CONVERSION_LABEL',
             'value': 1.0,
             'currency': 'AUD'
           });

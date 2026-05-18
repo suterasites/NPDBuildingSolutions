@@ -25,22 +25,21 @@
 
   <!--
     Google tag (gtag.js) + Form Lead conversion fire on page load.
-    REQUIRED PRE-LAUNCH: replace the placeholder IDs with the real ones from Nathan's Google Ads account.
-    - GA4_MEASUREMENT_ID: G-XXXXXXXXXX
-    - AW_CONVERSION_ID: AW-XXXXXXXXXX
-    - FORM_CONVERSION_LABEL: paste from Form Lead conversion action (keep separate from Phone Call Lead - Grout Academy lesson)
-    Verify with Tag Assistant on day 1 that the LIVE account ID is firing.
+    Installed 2026-05-18 with AW-18059912449. STILL TO DO:
+    - Create Form Lead conversion action, replace FORM_CONVERSION_LABEL placeholder below
+    - Optionally add a GA4 property and config call here once it exists
+    Until FORM_CONVERSION_LABEL is swapped, the gtag fires but the conversion event
+    hits an unknown label and Google silently drops it - no harm, no signal.
   -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA4_MEASUREMENT_ID"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18059912449"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'GA4_MEASUREMENT_ID');
-    gtag('config', 'AW_CONVERSION_ID');
+    gtag('config', 'AW-18059912449');
     // Form Lead conversion fires immediately on /thank-you load
     gtag('event', 'conversion', {
-      'send_to': 'AW_CONVERSION_ID/FORM_CONVERSION_LABEL',
+      'send_to': 'AW-18059912449/FORM_CONVERSION_LABEL',
       'value': 1.0,
       'currency': 'AUD'
     });
