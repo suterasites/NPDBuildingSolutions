@@ -116,6 +116,13 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-18059912449');
+    // Phone Call Lead conversion - dynamic number replacement.
+    // Google scans the DOM for "0427 278 285" and tel:+61427278285, swaps both with
+    // a forwarding number on ad-driven traffic, and tracks every connected call as
+    // a conversion. Nathan's real number stays visible to organic visitors.
+    gtag('config', 'AW-18059912449/z5xwCPfoma8cEIHK0aND', {
+      'phone_conversion_number': '0427 278 285'
+    });
   </script>
 
   <script>
@@ -699,18 +706,10 @@
       });
     })();
 
-    // Phone Call Lead conversion: fires when a tel: link is clicked.
-    document.querySelectorAll('[data-conversion="call"]').forEach(function(el) {
-      el.addEventListener('click', function() {
-        if (typeof gtag === 'function') {
-          gtag('event', 'conversion', {
-            'send_to': 'AW-18059912449/PHONE_CONVERSION_LABEL',
-            'value': 1.0,
-            'currency': 'AUD'
-          });
-        }
-      });
-    });
+    // Note: Phone Call Lead conversions are handled by gtag's dynamic number
+    // replacement (configured in the <head>), not by a per-click event listener.
+    // Tracking the actual connected call is more accurate than counting tel: clicks
+    // (clicks include change-of-mind taps, accidental presses, etc.).
 
     // GCLID capture for offline conversion attribution.
     // Priority: ?gclid= URL param (current click) -> sessionStorage (stored on landing) -> _gcl_aw cookie (set by gtag.js).
