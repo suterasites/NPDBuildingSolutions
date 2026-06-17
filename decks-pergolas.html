@@ -200,6 +200,31 @@
       outline-offset: 2px;
     }
 
+    /* Recent Work deck gallery - self-contained so it does not depend on
+       purged Tailwind grid/col-span utilities in the precompiled styles.css */
+    .deck-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .deck-gallery img {
+      display: block;
+      width: 100%;
+      height: 13rem;
+      object-fit: cover;
+    }
+    .deck-gallery .dg-banner { grid-column: span 2 / span 2; }
+    @media (min-width: 640px) {
+      .deck-gallery { gap: 1.5rem; }
+      .deck-gallery img { height: 16rem; }
+    }
+    @media (min-width: 1024px) {
+      .deck-gallery { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+      .deck-gallery .dg-wide { grid-column: span 3 / span 3; }
+      .deck-gallery .dg-std { grid-column: span 2 / span 2; }
+      .deck-gallery img { height: 18rem; }
+    }
+
   </style>
 </head>
 <body class="bg-white text-gray-900 antialiased">
@@ -500,31 +525,31 @@
         <h2 class="text-3xl sm:text-4xl font-display text-gray-900 mb-4" style="letter-spacing: -0.03em;">A Composite Deck We Just Finished</h2>
         <p class="text-gray-500 text-base max-w-xl mx-auto" style="line-height: 1.7;">A covered composite deck build in the Bairnsdale region. Low-maintenance two-tone boards, clean steel posts and a finish made for year-round outdoor living.</p>
       </div>
-      <div class="grid grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6">
+      <div class="deck-gallery">
 
         <!-- Covered deck (verandah) -->
-        <div class="group shadow-elevated hover:shadow-floating overflow-hidden transition-shadow duration-300 lg:col-span-3">
-          <picture><source type="image/webp" srcset="Assets/optimized/Composite%20Deck%20and%20Verandah-400.webp 400w, Assets/optimized/Composite%20Deck%20and%20Verandah-800.webp 800w" sizes="(max-width: 640px) 100vw, 800px"><img src="Assets/Composite Deck and Verandah.jpg" alt="Covered composite deck and verandah built by NPD Building Solutions" width="1600" height="1200" loading="lazy" decoding="async" class="w-full h-52 sm:h-64 lg:h-80 object-cover transition-transform duration-300 group-hover:scale-[1.03]"></picture>
+        <div class="group shadow-elevated hover:shadow-floating overflow-hidden transition-shadow duration-300 dg-wide">
+          <picture><source type="image/webp" srcset="Assets/optimized/Composite%20Deck%20and%20Verandah-400.webp 400w, Assets/optimized/Composite%20Deck%20and%20Verandah-800.webp 800w" sizes="(max-width: 640px) 100vw, 600px"><img src="Assets/Composite Deck and Verandah.jpg" alt="Covered composite deck and verandah built by NPD Building Solutions" width="1600" height="1200" loading="lazy" decoding="async" class="transition-transform duration-300 group-hover:scale-[1.03]"></picture>
         </div>
 
         <!-- French Doors -->
-        <div class="group shadow-elevated hover:shadow-floating overflow-hidden transition-shadow duration-300 lg:col-span-3">
-          <picture><source type="image/webp" srcset="Assets/optimized/Composite%20Deck%20with%20French%20Doors-400.webp 400w, Assets/optimized/Composite%20Deck%20with%20French%20Doors-800.webp 800w" sizes="(max-width: 640px) 100vw, 800px"><img src="Assets/Composite Deck with French Doors.jpg" alt="Composite deck with French doors built by NPD Building Solutions" width="1600" height="1200" loading="lazy" decoding="async" class="w-full h-52 sm:h-64 lg:h-80 object-cover transition-transform duration-300 group-hover:scale-[1.03]"></picture>
+        <div class="group shadow-elevated hover:shadow-floating overflow-hidden transition-shadow duration-300 dg-wide">
+          <picture><source type="image/webp" srcset="Assets/optimized/Composite%20Deck%20with%20French%20Doors-400.webp 400w, Assets/optimized/Composite%20Deck%20with%20French%20Doors-800.webp 800w" sizes="(max-width: 640px) 100vw, 600px"><img src="Assets/Composite Deck with French Doors.jpg" alt="Composite deck with French doors built by NPD Building Solutions" width="1600" height="1200" loading="lazy" decoding="async" class="transition-transform duration-300 group-hover:scale-[1.03]"></picture>
         </div>
 
         <!-- Garden Outlook -->
-        <div class="group shadow-elevated hover:shadow-floating overflow-hidden transition-shadow duration-300 lg:col-span-2">
-          <picture><source type="image/webp" srcset="Assets/optimized/Covered%20Composite%20Deck%20-%20Garden%20Outlook-400.webp 400w, Assets/optimized/Covered%20Composite%20Deck%20-%20Garden%20Outlook-800.webp 800w" sizes="(max-width: 640px) 100vw, 800px"><img src="Assets/Covered Composite Deck - Garden Outlook.jpg" alt="Composite deck looking out over the garden under a verandah by NPD Building Solutions" width="1200" height="1600" loading="lazy" decoding="async" class="w-full h-52 sm:h-64 lg:h-64 object-cover transition-transform duration-300 group-hover:scale-[1.03]"></picture>
+        <div class="group shadow-elevated hover:shadow-floating overflow-hidden transition-shadow duration-300 dg-std">
+          <picture><source type="image/webp" srcset="Assets/optimized/Covered%20Composite%20Deck%20-%20Garden%20Outlook-400.webp 400w, Assets/optimized/Covered%20Composite%20Deck%20-%20Garden%20Outlook-800.webp 800w" sizes="(max-width: 640px) 100vw, 400px"><img src="Assets/Covered Composite Deck - Garden Outlook.jpg" alt="Composite deck looking out over the garden under a verandah by NPD Building Solutions" width="1200" height="1600" loading="lazy" decoding="async" class="transition-transform duration-300 group-hover:scale-[1.03]"></picture>
         </div>
 
         <!-- Corner -->
-        <div class="group shadow-elevated hover:shadow-floating overflow-hidden transition-shadow duration-300 lg:col-span-2">
-          <picture><source type="image/webp" srcset="Assets/optimized/Covered%20Composite%20Deck%20-%20Corner-400.webp 400w, Assets/optimized/Covered%20Composite%20Deck%20-%20Corner-800.webp 800w" sizes="(max-width: 640px) 100vw, 800px"><img src="Assets/Covered Composite Deck - Corner.jpg" alt="Covered composite deck with steel posts and street outlook by NPD Building Solutions" width="1200" height="1600" loading="lazy" decoding="async" class="w-full h-52 sm:h-64 lg:h-64 object-cover transition-transform duration-300 group-hover:scale-[1.03]"></picture>
+        <div class="group shadow-elevated hover:shadow-floating overflow-hidden transition-shadow duration-300 dg-std">
+          <picture><source type="image/webp" srcset="Assets/optimized/Covered%20Composite%20Deck%20-%20Corner-400.webp 400w, Assets/optimized/Covered%20Composite%20Deck%20-%20Corner-800.webp 800w" sizes="(max-width: 640px) 100vw, 400px"><img src="Assets/Covered Composite Deck - Corner.jpg" alt="Covered composite deck with steel posts and street outlook by NPD Building Solutions" width="1200" height="1600" loading="lazy" decoding="async" class="transition-transform duration-300 group-hover:scale-[1.03]"></picture>
         </div>
 
         <!-- Board Detail -->
-        <div class="group shadow-elevated hover:shadow-floating overflow-hidden transition-shadow duration-300 col-span-2 lg:col-span-2">
-          <picture><source type="image/webp" srcset="Assets/optimized/Composite%20Decking%20Detail-400.webp 400w, Assets/optimized/Composite%20Decking%20Detail-800.webp 800w" sizes="(max-width: 640px) 100vw, 800px"><img src="Assets/Composite Decking Detail.jpg" alt="Composite decking boards close up by NPD Building Solutions" width="1600" height="1200" loading="lazy" decoding="async" class="w-full h-52 sm:h-64 lg:h-64 object-cover transition-transform duration-300 group-hover:scale-[1.03]"></picture>
+        <div class="group shadow-elevated hover:shadow-floating overflow-hidden transition-shadow duration-300 dg-std dg-banner">
+          <picture><source type="image/webp" srcset="Assets/optimized/Composite%20Decking%20Detail-400.webp 400w, Assets/optimized/Composite%20Decking%20Detail-800.webp 800w" sizes="(max-width: 640px) 100vw, 400px"><img src="Assets/Composite Decking Detail.jpg" alt="Composite decking boards close up by NPD Building Solutions" width="1600" height="1200" loading="lazy" decoding="async" class="transition-transform duration-300 group-hover:scale-[1.03]"></picture>
         </div>
 
       </div>
