@@ -3,3 +3,6 @@ temporary screenshots/
 input.css
 
 .vercel
+
+# Internal notes. The host publishes everything tracked here, so this stays local.
+CLAUDE.md
