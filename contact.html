@@ -467,7 +467,7 @@
           <p class="text-white/80 font-semibold text-sm tracking-wide uppercase mb-3">Send A Message</p>
           <h2 class="text-3xl sm:text-4xl font-display text-white mb-10" style="letter-spacing: -0.03em;">Request A Free Quote</h2>
 
-          <form id="contact-form" action="https://formspree.io/f/maqpkepq" method="POST" novalidate>
+          <form id="contact-form" action="https://formspree.io/f/maqpkepq" method="POST" novalidate data-no-lead>
             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
             <div class="grid sm:grid-cols-2 gap-5 mb-5">
               <div>
@@ -479,7 +479,7 @@
             </div>
             <div class="grid sm:grid-cols-2 gap-5 mb-5">
               <div>
-                <input type="email" id="email" name="email" required autocomplete="email" class="w-full px-4 py-3.5 border border-white/30 bg-white/10 text-sm text-white placeholder-white/60 transition-colors duration-200 focus:outline-none focus:border-white focus:bg-white/15" placeholder="Email*">
+                <input type="email" id="email" name="email" autocomplete="email" class="w-full px-4 py-3.5 border border-white/30 bg-white/10 text-sm text-white placeholder-white/60 transition-colors duration-200 focus:outline-none focus:border-white focus:bg-white/15" placeholder="Email">
               </div>
               <div>
                 <select id="service" name="service" class="w-full px-4 py-3.5 border border-white/30 bg-white/10 text-sm text-white/60 transition-colors duration-200 focus:outline-none focus:border-white focus:bg-white/15 appearance-none" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='rgba(255,255,255,0.6)' d='M6 8L1 3h10z'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 1rem center;">
@@ -502,8 +502,11 @@
               Send Message
             </button>
 
+            <!-- Error Message (hidden by default, filled in by the submit handler) -->
+            <div id="form-error" class="hidden bg-white/20 border border-white/30 px-4 py-3 text-sm text-white mt-6" role="alert"></div>
+
             <!-- Success Message (hidden by default) -->
-            <div id="form-success" class="hidden bg-white/20 border border-white/30 px-4 py-3 text-sm text-white mt-6">
+            <div id="form-success" class="hidden bg-white/20 border border-white/30 px-4 py-3 text-sm text-white mt-6" role="status">
               <div class="flex items-center gap-2">
                 <svg class="w-5 h-5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                 <span>Thanks for your message. We'll get back to you as soon as possible.</span>
@@ -656,39 +659,106 @@
     </div>
   </footer>
 
-  <!-- Form Submit Handler -->
+  <!-- Form Submit Handler
+       The form carries data-no-lead, so the page-wide SUTERA_LEAD_EVENTS listener
+       does not count the press. generate_lead is sent here, only once Formspree
+       has accepted the enquiry, so GA4 counts each real enquiry exactly once.
+       Every way the send can stop (a missing field, a rejected or failed send)
+       tells the visitor what happened and gives them the phone number. -->
   <script>
     (function() {
       var form = document.getElementById('contact-form');
       var successMsg = document.getElementById('form-success');
+      var errorMsg = document.getElementById('form-error');
+      var button = form.querySelector('button[type="submit"]');
+      var buttonLabel = button.innerHTML;
+      var PHONE = '<a href="tel:0427278285" class="font-semibold" style="text-decoration: underline;">0427 278 285</a>';
+      var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      function field(id) { return document.getElementById(id); }
+
+      function listOf(items) {
+        if (items.length === 1) return items[0];
+        return items.slice(0, -1).join(', ') + (items.length > 2 ? ',' : '') + ' and ' + items[items.length - 1];
+      }
+
+      function showError(html, focusEl) {
+        successMsg.classList.add('hidden');
+        errorMsg.innerHTML = html;
+        errorMsg.classList.remove('hidden');
+        errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        if (focusEl) focusEl.focus({ preventScroll: true });
+      }
+
+      function sendFailed() {
+        showError('Sorry, your message did not send. Please try again, or call or text ' + PHONE + ' and we will look after you.');
+      }
+
+      function setSending(on) {
+        button.disabled = on;
+        button.innerHTML = on ? 'Sending...' : buttonLabel;
+      }
 
       form.addEventListener('submit', function(e) {
         e.preventDefault();
+        if (button.disabled) return;
 
-        // Basic validation
-        var name = document.getElementById('name').value.trim();
-        var email = document.getElementById('email').value.trim();
-        var message = document.getElementById('message').value.trim();
+        var nameEl = field('name'), phoneEl = field('phone'), emailEl = field('email'), messageEl = field('message');
+        var name = nameEl.value.trim();
+        var phone = phoneEl.value.trim();
+        var email = emailEl.value.trim();
+        var message = messageEl.value.trim();
 
-        if (!name || !email || !message) {
+        // Name, one way to reach them (phone OR email) and a message.
+        var missing = [], firstMissing = null;
+        if (!name) { missing.push('your name'); firstMissing = firstMissing || nameEl; }
+        if (!phone && !email) { missing.push('a phone number or email so we can reply'); firstMissing = firstMissing || phoneEl; }
+        if (!message) { missing.push('a short message about the job'); firstMissing = firstMissing || messageEl; }
+        if (missing.length) {
+          showError('Please add ' + listOf(missing) + ', then press Send again.', firstMissing);
+          return;
+        }
+        if (email && !EMAIL_RE.test(email)) {
+          showError('That email address does not look right. Please check it, or clear it and leave your phone number instead.', emailEl);
           return;
         }
 
-        // Submit to Formspree
         var formData = new FormData(form);
+        if (!email) formData.delete('email');
+
+        errorMsg.classList.add('hidden');
+        setSending(true);
+
         fetch(form.action, {
           method: 'POST',
           body: formData,
           headers: { 'Accept': 'application/json' }
         }).then(function(response) {
           if (response.ok) {
-            successMsg.classList.remove('hidden');
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'generate_lead', { form_id: 'contact-form', transport_type: 'beacon' });
+            }
             form.reset();
+            successMsg.classList.remove('hidden');
             successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             setTimeout(function() {
               successMsg.classList.add('hidden');
             }, 8000);
+            return;
           }
+          return response.json().catch(function() { return {}; }).then(function(body) {
+            var errs = (body && body.errors) || [];
+            var emailRejected = errs.some(function(err) { return err && err.field === 'email'; });
+            if (emailRejected) {
+              showError('That email address was not accepted. Please check it, or clear it and leave your phone number instead.', emailEl);
+            } else {
+              sendFailed();
+            }
+          });
+        }).catch(function() {
+          sendFailed();
+        }).then(function() {
+          setSending(false);
         });
       });
     })();
