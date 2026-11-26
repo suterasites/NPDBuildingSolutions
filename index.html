@@ -160,6 +160,97 @@
       outline: 3px solid #fff;
       outline-offset: 2px;
     }
+
+    /* Hero: phone number and a short quote form in the first screen.
+       Scoped here because styles.css is precompiled Tailwind and only carries
+       utilities the markup already used when it was built.
+       On a phone the order is headline, call button, quote form, then the intro
+       paragraph, so the number and the form both sit in the first screen without
+       hiding any copy. From 1024px the form moves beside the copy. */
+    .hero-content { padding-top: 5.5rem; padding-bottom: 1.75rem; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr); row-gap: 1rem; align-items: end; }
+    .hero-copy { display: contents; }
+    .hero-head { order: 1; }
+    .hero-actions { order: 2; display: flex; flex-direction: column; gap: 0.75rem; }
+    .hero-quote { order: 3; }
+    .hero-lede { order: 4; }
+    .hero-secondary { display: none; }
+    .hero-scroll { display: none; }
+    .hero-call { font-size: 1rem; letter-spacing: 0.06em; min-height: 3.1rem; }
+
+    .hero-quote {
+      background: rgba(17, 17, 17, 0.86);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-top: 3px solid #E8710A;
+      padding: 1.1rem 1.1rem 1.15rem;
+      box-shadow:
+        0 2px 4px rgba(232, 113, 10, 0.06),
+        0 8px 16px rgba(0, 0, 0, 0.18),
+        0 24px 48px rgba(0, 0, 0, 0.28);
+    }
+    .hero-quote-title { font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; text-transform: uppercase; color: #fff; font-size: 1.35rem; letter-spacing: -0.01em; line-height: 1; }
+    .hero-quote-note { color: rgba(255, 255, 255, 0.7); font-size: 0.78rem; margin-top: 0.3rem; line-height: 1.5; }
+    .hero-quote-fields { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.6rem; margin-top: 0.85rem; }
+    .hero-quote-fields .hero-quote-wide { grid-column: 1 / -1; }
+    .hero-quote input,
+    .hero-quote select {
+      display: block; width: 100%; min-height: 2.9rem;
+      padding: 0.7rem 0.85rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 0;
+      color: #fff; font-size: 1rem; font-family: inherit;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+    .hero-quote input::placeholder { color: rgba(255, 255, 255, 0.62); }
+    .hero-quote select {
+      appearance: none; -webkit-appearance: none;
+      color: rgba(255, 255, 255, 0.85);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='rgba(255,255,255,0.7)' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 0.9rem center;
+      padding-right: 2.2rem;
+    }
+    .hero-quote select option { color: #111; background: #fff; }
+    .hero-quote input:focus,
+    .hero-quote select:focus { outline: none; border-color: #E8710A; background-color: rgba(255, 255, 255, 0.13); }
+    .hero-quote input:focus-visible,
+    .hero-quote select:focus-visible { outline: 2px solid #E8710A; outline-offset: 1px; }
+    .hero-quote-btn {
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+      width: 100%; min-height: 3rem; margin-top: 0.7rem;
+      background: #E8710A; color: #fff; border: 0; border-radius: 0; cursor: pointer;
+      font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease;
+    }
+    .hero-quote-btn:hover { background: #CC6010; transform: scale(1.02); }
+    .hero-quote-btn:active { background: #CC6010; transform: scale(0.98); }
+    .hero-quote-btn:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+    .hero-quote-btn[disabled] { opacity: 0.7; cursor: wait; transform: none; }
+    .hero-quote-msg { margin-top: 0.7rem; padding: 0.6rem 0.75rem; font-size: 0.85rem; line-height: 1.5; color: #fff; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.25); }
+    .hero-quote-msg a { color: #fff; font-weight: 700; text-decoration: underline; }
+    .hero-quote-msg[hidden] { display: none; }
+    .hero-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+    @media (min-width: 640px) {
+      .hero-content { padding-top: 7rem; padding-bottom: 7rem; }
+      .hero-grid { row-gap: 1.5rem; }
+      .hero-lede { order: 2; }
+      .hero-actions { order: 3; flex-direction: row; gap: 1rem; }
+      .hero-quote { order: 4; max-width: 34rem; }
+      .hero-secondary { display: inline-flex; }
+      .hero-call { font-size: 0.875rem; letter-spacing: 0.1em; min-height: 0; }
+    }
+    @media (min-width: 1024px) {
+      .hero-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: 3rem; }
+      .hero-copy { display: block; }
+      .hero-copy > * + * { margin-top: 1.5rem; }
+      .hero-quote { order: 0; max-width: none; padding: 1.5rem; }
+      .hero-quote-title { font-size: 1.6rem; }
+      .hero-scroll { display: block; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-quote-btn, .hero-quote-btn:hover, .hero-quote-btn:active { transition: none; transform: none; }
+    }
   </style>
   <!-- Sutera lead events (GA4) -->
   <script>/* SUTERA_LEAD_EVENTS */
@@ -393,29 +484,69 @@
     </div>
 
     <!-- Hero Content - pushed to bottom -->
-    <div class="relative z-10 mt-auto max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-24 sm:pb-28">
-      <div class="max-w-2xl">
-        <p class="text-white font-semibold text-xs tracking-[0.2em] uppercase mb-2">Based in Bairnsdale, VIC - 10+ Years Experience</p>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display text-white leading-[0.95] mb-6" style="letter-spacing: -0.03em;">
-          Your All-Round Building Solution
-        </h1>
-        <p class="text-sm text-gray-200 leading-relaxed mb-10 max-w-lg" style="line-height: 1.7;">
-          Quality carpentry, renovations, decks, pergolas, tiling, fencing and more. Servicing Bairnsdale and surrounding areas with attention to detail and service with a smile.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="tel:0427278285" class="btn-primary inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-dark active:bg-brand-dark text-white font-bold text-sm tracking-[0.1em] uppercase px-5 py-3 sm:px-8 sm:py-4 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] shadow-floating">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-            Get a Free Quote
-          </a>
-          <a href="/services" class="btn-secondary inline-flex items-center justify-center gap-2 text-white font-semibold text-sm tracking-[0.1em] uppercase px-5 py-3 sm:px-8 sm:py-4 border border-white/40 hover:bg-white/10 active:bg-white/15 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]">
-            View Our Services
-          </a>
+    <div class="hero-content relative z-10 mt-auto max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-head max-w-2xl">
+            <p class="text-white font-semibold text-xs tracking-[0.2em] uppercase mb-2">Based in Bairnsdale, VIC - 10+ Years Experience</p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display text-white leading-[0.95]" style="letter-spacing: -0.03em;">
+              Your All-Round Building Solution
+            </h1>
+          </div>
+          <p class="hero-lede text-sm text-gray-200 leading-relaxed max-w-lg" style="line-height: 1.7;">
+            Quality carpentry, renovations, decks, pergolas, tiling, fencing and more. Servicing Bairnsdale and surrounding areas with attention to detail and service with a smile.
+          </p>
+          <div class="hero-actions">
+            <a href="tel:0427278285" class="hero-call btn-primary inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-dark active:bg-brand-dark text-white font-bold uppercase px-5 py-3 sm:px-8 sm:py-4 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] shadow-floating">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              Call 0427 278 285
+            </a>
+            <a href="/services" class="hero-secondary btn-secondary items-center justify-center gap-2 text-white font-semibold text-sm tracking-[0.1em] uppercase px-5 py-3 sm:px-8 sm:py-4 border border-white/40 hover:bg-white/10 active:bg-white/15 transition-spring transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]">
+              View Our Services
+            </a>
+          </div>
         </div>
+
+        <!-- Short quote form. Same Formspree form as the contact section below.
+             data-no-lead: generate_lead is sent by the handler at the foot of the
+             page only once Formspree accepts the enquiry, never on the press. -->
+        <form id="hero-quote-form" class="hero-quote" action="https://formspree.io/f/maqpkepq" method="POST" novalidate data-no-lead aria-labelledby="hero-quote-title">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+          <h2 id="hero-quote-title" class="hero-quote-title">Get A Free Quote</h2>
+          <p class="hero-quote-note">Your name, your number and the job. We'll get back to you within 24 hours.</p>
+          <div class="hero-quote-fields">
+            <div>
+              <label for="hero-name" class="hero-sr">Your name</label>
+              <input type="text" id="hero-name" name="name" required autocomplete="name" placeholder="Name*">
+            </div>
+            <div>
+              <label for="hero-phone" class="hero-sr">Phone number</label>
+              <input type="tel" id="hero-phone" name="phone" required autocomplete="tel" inputmode="tel" placeholder="Phone*">
+            </div>
+            <div class="hero-quote-wide">
+              <label for="hero-service" class="hero-sr">What is the job?</label>
+              <select id="hero-service" name="service">
+                <option value="">What's the job?</option>
+                <option value="general-carpentry">General Carpentry</option>
+                <option value="bathroom-renovations">Bathroom Renovations</option>
+                <option value="windows-doors">Windows & Door Replacements</option>
+                <option value="decks-pergolas">Decks & Pergolas</option>
+                <option value="tiling">Tiling</option>
+                <option value="fencing-gates">Fencing, Gates & Pool Fencing</option>
+                <option value="custom-work">Custom Work</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="hero-quote-btn">Send It Through</button>
+          <div id="hero-quote-error" class="hero-quote-msg" role="alert" hidden></div>
+          <div id="hero-quote-success" class="hero-quote-msg" role="status" hidden>Thanks, that's come through. We'll be in touch on the number you left.</div>
+        </form>
       </div>
     </div>
 
     <!-- Scroll indicator - bottom right -->
-    <div class="absolute bottom-8 right-8 z-10">
+    <div class="hero-scroll absolute bottom-8 right-8 z-10">
       <span class="text-white/60 text-xs font-medium tracking-[0.2em] uppercase">Scroll</span>
     </div>
   </header>
@@ -1046,6 +1177,76 @@
       </div>
     </div>
   </footer>
+
+  <!-- Hero quote form handler
+       The form carries data-no-lead, so the page-wide SUTERA_LEAD_EVENTS listener
+       does not count the press. generate_lead is sent here only once Formspree has
+       accepted the enquiry. Every way the send can stop says what happened and
+       gives the phone number, so nobody presses Send and hears nothing. -->
+  <script>
+    (function() {
+      var form = document.getElementById('hero-quote-form');
+      if (!form || !window.fetch || !window.FormData) return;
+      var errorMsg = document.getElementById('hero-quote-error');
+      var successMsg = document.getElementById('hero-quote-success');
+      var button = form.querySelector('button[type="submit"]');
+      var buttonLabel = button.innerHTML;
+      var PHONE = '<a href="tel:0427278285">0427 278 285</a>';
+
+      function showError(html, focusEl) {
+        successMsg.hidden = true;
+        errorMsg.innerHTML = html;
+        errorMsg.hidden = false;
+        if (focusEl) focusEl.focus({ preventScroll: true });
+      }
+      function sendFailed() {
+        showError('Sorry, that did not send. Please try again, or call or text ' + PHONE + '.');
+      }
+      function setSending(on) {
+        button.disabled = on;
+        button.innerHTML = on ? 'Sending...' : buttonLabel;
+      }
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (button.disabled) return;
+        var nameEl = document.getElementById('hero-name');
+        var phoneEl = document.getElementById('hero-phone');
+        var name = nameEl.value.trim();
+        var phone = phoneEl.value.trim();
+
+        if (!name && !phone) { showError('Please add your name and phone number, then press Send again.', nameEl); return; }
+        if (!name) { showError('Please add your name, then press Send again.', nameEl); return; }
+        if (!phone) { showError('Please add a phone number so we can call you back.', phoneEl); return; }
+        if (phone.replace(/\D/g, '').length < 8) {
+          showError('That phone number looks too short. Please check it, or call or text ' + PHONE + '.', phoneEl);
+          return;
+        }
+
+        errorMsg.hidden = true;
+        setSending(true);
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function(response) {
+          if (response.ok) {
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'generate_lead', { form_id: 'hero-quote-form', transport_type: 'beacon' });
+            }
+            form.reset();
+            successMsg.hidden = false;
+            return;
+          }
+          sendFailed();
+        }).catch(function() {
+          sendFailed();
+        }).then(function() {
+          setSending(false);
+        });
+      });
+    })();
+  </script>
 
   <script>
   document.querySelectorAll('.email-protect').forEach(function(el){el.innerHTML='npdbuildingsolutions@outlook.com';});
